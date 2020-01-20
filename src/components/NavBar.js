@@ -1,26 +1,22 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
 
 
     render () {
-                const pages = ['Home', 'Our Story', 'Products', 'Health Benefit', 'Retailers', 'Contact', 'Check Out'];
-                const navLinks = pages.map(page => {
-                    return (
-                        <span>  
-                            <a href = {'/' + page}>
-                                {page} 
-                                
-                            </a>
-                            <span> </span>
-                            <span> </span>
-                        </span>
+                
+                return 
+                <BrowserRouter> 
+                <nav>
+                <Link to="/">Home</Link>
+                <Link to="/Contact">Contact</Link>
+                <Link to="/HealthBenefits">Health Benefits</Link>
+                </nav>
+                </BrowserRouter>
 
-                    );
-                });
-
-            return <nav>{navLinks}</nav>
+            // return <nav>{navLinks}</nav>
 
 
         
