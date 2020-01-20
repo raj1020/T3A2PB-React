@@ -8,10 +8,15 @@ class NavBar extends React.Component {
                 const pages = ['Home', 'Our Story', 'Products', 'Health Benefit', 'Retailers', 'Contact', 'Check Out'];
                 const navLinks = pages.map(page => {
                     return (
+                        <span>  
                             <a href = {'/' + page}>
                                 {page} 
-                                <span> </span>
+                                
                             </a>
+                            <span> </span>
+                            <span> </span>
+                        </span>
+
                     );
                 });
 

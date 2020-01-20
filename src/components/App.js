@@ -9,9 +9,8 @@ import NavBar from './NavBar';
     render () {
         return (
             <>
-                <Contact />  
                 <NavBar />
-                
+                <Contact />  
                 
             </>
         )
