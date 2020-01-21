@@ -5,7 +5,7 @@ class Home extends React.Component {
 
 
     render () {
-        return <h1>Oakbrook Olive Farms</h1>
+        return <h1>Oakbrook Yass Valley</h1>
     }
 }
 

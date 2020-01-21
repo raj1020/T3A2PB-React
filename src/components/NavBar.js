@@ -7,19 +7,16 @@ class NavBar extends React.Component {
 
     render () {
                 
-                return 
-                <BrowserRouter> 
+            return 
+            <BrowserRouter> 
                 <nav>
-                <Link to="/">Home</Link>
-                <Link to="/Contact">Contact</Link>
-                <Link to="/HealthBenefits">Health Benefits</Link>
+                    <Link to="/">Home</Link>
+                    <Link to="/Contact">Contact</Link>
+                    <Link to="/HealthBenefits">Health Benefits</Link>
                 </nav>
-                </BrowserRouter>
+            </BrowserRouter>
 
             // return <nav>{navLinks}</nav>
-
-
-        
     }
 }
 

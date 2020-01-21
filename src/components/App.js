@@ -1,14 +1,14 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from "react-router-dom";
-import Contact from './Contact';
+import Contact from './pages/Contact';
 //import NavBar from './NavBar';
-import Home from './Home';
-import CheckOut from './CheckOut';
-import HealthBenefits from './HealthBenefits';
-import OurStory from './OurStory';
-import Products from './Products';
-import Retailers from './Retailers';
-import ShowProduct from './ShowProduct';
+import Home from './pages/Home';
+import CheckOut from './pages/CheckOut';
+import HealthBenefits from './pages/HealthBenefits';
+import OurStory from './pages/OurStory';
+import Products from './pages/Products';
+import Retailers from './pages/Retailers';
+import ShowProduct from './pages/ShowProduct';
 
 
 
