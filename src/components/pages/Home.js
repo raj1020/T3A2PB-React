@@ -19,9 +19,9 @@ class Home extends React.Component {
             <Heading>
                 <h1>Oakbrook</h1>
             </Heading>
-            <subHeading>
+            <SubHeading>
                 <h2>All Australian, organically managed olive grove and trufferie - Yass Valley, New South Wales.</h2>
-            </subHeading>
+            </SubHeading>
             </>
         );
     }
