@@ -2,31 +2,37 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import FolderIcon from '@material-ui/icons/Folder';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: 1000,
   },
 });
 
-export default function LabelBottomNavigation() {
+export default function SimpleBottomNavigation() {
   const classes = useStyles();
-  const [value, setValue] = React.useState('recents');
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [value, setValue] = React.useState(0);
 
   return (
-    <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-    </BottomNavigation>
+    <Container maxWidth="sm">
+    <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        showLabels
+        className={classes.root}
+      >
+        <BottomNavigationAction label="Contact" icon={<ContactMailIcon />} />
+        <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+        <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+      </BottomNavigation>
+    </Container>
   );
 }
