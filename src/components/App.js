@@ -10,7 +10,7 @@ import Products from './pages/Products';
 import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import BottomNavigation from './mui/BottomNavigation';
+// import BottomNavigation from './mui/BottomNavigation';
 import Footer from './mui/Footer';
 // import Styled from 'styled-components';
 
@@ -41,7 +41,6 @@ import Footer from './mui/Footer';
                     <Route exact path = "/showproduct" component = {ShowProduct} />
                 </Switch>
                 </BrowserRouter>
-                <BottomNavigation />
                 <Footer />
             </React.Fragment>
             
