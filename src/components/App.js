@@ -10,6 +10,7 @@ import Products from './pages/Products';
 import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from './mui/AppBar';
 // import BottomNavigation from './mui/BottomNavigation';
 import Footer from './mui/Footer';
 // import Styled from 'styled-components';
@@ -22,6 +23,7 @@ import Footer from './mui/Footer';
         return (
             <React.Fragment>
                 <CssBaseline />
+                <AppBar />
                 <BrowserRouter> 
                     <Link to="/">Home</Link> <span> </span> 
                     <Link to="/ourstory">Our Story</Link>  <span> </span> 
