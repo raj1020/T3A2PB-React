@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 import Contact from './pages/Contact';
-//import NavBar from './NavBar';
+import NavBar from './NavBar';
 import Home from './pages/Home';
 import CheckOut from './pages/CheckOut';
 import HealthBenefits from './pages/HealthBenefits';
@@ -21,17 +21,8 @@ import Footer from './mui/Footer';
 
     render () {
         return (
-            <React.Fragment>
-                <CssBaseline />
-                <AppBar />
-                <BrowserRouter> 
-                    <Link to="/">Home</Link> <span> </span> 
-                    <Link to="/ourstory">Our Story</Link>  <span> </span> 
-                    <Link to="/products">Products</Link>  <span> </span> 
-                    <Link to="/healthbenefits">Health Benefits</Link> <span> </span> 
-                    <Link to="/retailers">Retailers</Link>  <span> </span> 
-                    <Link to="/contact">Contact</Link>  <span> </span> 
-                    <Link to="/checkout">Check Out</Link>  
+            <BrowserRouter> 
+                    <NavBar />
                 <Switch>
                     <Route exact path = "/" component = {Home} />
                     <Route exact path = "/contact" component = {Contact} />
