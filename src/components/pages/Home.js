@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import image from './../../images/background1.jpg';
 
-const Heading = styled.section`
+const Container = styled.section`
     text-align: center;
     padding: 10vh;
     background-image: url(${image});
@@ -25,12 +25,13 @@ class Home extends React.Component {
     render () {
         return (
             <>
-            <Heading>
-                <h1>Oakbrook</h1>
-            </Heading>
-            <SubHeading>
-                <h2>All Australian, organically managed olive grove and trufferie - Yass Valley, New South Wales.</h2>
-            </SubHeading>
+            <Container>
+                <h1>OAKBROOK</h1>
+                <SubHeading>
+                    <h2>Yass Valley, New South Wales</h2>
+                    <h2>All Australian, organically managed olive grove and trufferie.</h2>
+                </SubHeading>
+            </Container>
             </>
         );
     }
