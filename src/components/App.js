@@ -11,7 +11,9 @@ import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import BottomNavigation from './mui/BottomNavigation';
+import Footer from './mui/Footer';
 // import Styled from 'styled-components';
+
 
  class App extends React.Component {
      state = { location: "home" }
@@ -40,6 +42,7 @@ import BottomNavigation from './mui/BottomNavigation';
                 </Switch>
                 </BrowserRouter>
                 <BottomNavigation />
+                <Footer />
             </React.Fragment>
             
         )
