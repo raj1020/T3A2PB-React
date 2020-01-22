@@ -5,7 +5,7 @@ const Heading = styled.section`
     text-align: center;
 `;
 
-const subHeading = styled.section`
+const SubHeading = styled.section`
     text-align: center;
 `;
 

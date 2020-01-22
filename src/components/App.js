@@ -9,6 +9,8 @@ import OurStory from './pages/OurStory';
 import Products from './pages/Products';
 import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import BottomNavigation from './mui/BottomNavigation';
 // import Styled from 'styled-components';
 
  class App extends React.Component {
@@ -16,8 +18,9 @@ import ShowProduct from './pages/ShowProduct';
 
     render () {
         return (
-            <>
-            <BrowserRouter> 
+            <React.Fragment>
+                <CssBaseline />
+                <BrowserRouter> 
                     <Link to="/">Home</Link> <span> </span> 
                     <Link to="/ourstory">Our Story</Link>  <span> </span> 
                     <Link to="/products">Products</Link>  <span> </span> 
@@ -35,8 +38,10 @@ import ShowProduct from './pages/ShowProduct';
                     <Route exact path = "/retailers" component = {Retailers} />
                     <Route exact path = "/showproduct" component = {ShowProduct} />
                 </Switch>
-            </BrowserRouter>  
-            </>
+                </BrowserRouter>
+                <BottomNavigation />
+            </React.Fragment>
+            
         )
     }
 }
