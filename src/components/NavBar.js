@@ -7,6 +7,7 @@ class NavBar extends React.Component {
 
     render () {
                 
+<<<<<<< HEAD
                 return 
                 <BrowserRouter> 
                 <nav>
@@ -24,6 +25,18 @@ class NavBar extends React.Component {
 
 
         
+=======
+            return 
+            <BrowserRouter> 
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/Contact">Contact</Link>
+                    <Link to="/HealthBenefits">Health Benefits</Link>
+                </nav>
+            </BrowserRouter>
+
+            // return <nav>{navLinks}</nav>
+>>>>>>> elliot2
     }
 }
 
