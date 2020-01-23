@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import Contact from './Contact';
 import NavBar from './NavBar';
 import Home from './Home';
+//import CheckOutPage from './pages/CheckOutPage';
 import CheckOut from './CheckOut';
 import HealthBenefits from './HealthBenefits';
 import OurStory from './OurStory';
