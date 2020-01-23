@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import api from '../../api/api'
 import BootstrapCard from '../bootstrap/BootstrapCard'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-class Products extends React.Component {
+class Products extends Component {
 
     componentDidMount = async ()=>{
         const response = await api.get('/user')
-        console.log(response)
+        console.log(response.data[0])
     }
 
     render () {
