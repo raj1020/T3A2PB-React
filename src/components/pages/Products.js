@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import api from '../../api/api'
 
-class Products extends React.Component {
+class Products extends Component {
 
     componentDidMount = async ()=>{
         const response = await api.get('/user')
