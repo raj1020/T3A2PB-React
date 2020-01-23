@@ -5,7 +5,7 @@ class Products extends React.Component {
 
     componentDidMount = async ()=>{
         const response = await api.get('/user')
-        console.log(response)
+        console.log(response.data[0])
     }
 
     render () {
