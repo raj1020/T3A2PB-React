@@ -6,6 +6,12 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+// import { createMuiTheme } from '@material-ui/core/styles';
+// import styled from 'styled-components';
+
+// const StyleContainer = styled.section`
+//   background-color: black;
+// `;
 
 function Copyright() {
   return (
@@ -29,9 +35,17 @@ function Copyright() {
   );
 }
 
+
+// const darkTheme = createMuiTheme({
+//   palette: {
+//     type: 'dark',
+//   },
+// });
+
 const useStyles = makeStyles(theme => ({
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: 'rgb(128,128,128)',
+    type: 'dark',
     // marginTop: theme.spacing(8),
     padding: theme.spacing(3, 0),
   },
@@ -43,7 +57,7 @@ export default function Footer(props) {
 
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" >
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
