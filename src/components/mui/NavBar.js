@@ -10,14 +10,14 @@ class NavBar extends React.Component {
   render () {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
-      <Menu>
+      <Menu right width={ 250 }>
         <a id="home" className="menu-item" href="/">Home</a>
         <a id="about" className="menu-item" href="/ourstory">Our Story</a>
-        <a id="contact" className="menu-item" href="/products">Products</a>
+        <a id="products" className="menu-item" href="/products">Products</a>
         <a id="contact" className="menu-item" href="/contact">Contact</a>
-        <a id="contact" className="menu-item" href="/healthbenefits">Health Benefits</a>
-        <a id="contact" className="menu-item" href="/retailers">Retailers</a>
-        <a id="contact" className="menu-item" href="/checkout">Check Out</a>
+        <a id="healthbenefits" className="menu-item" href="/healthbenefits">Health Benefits</a>
+        <a id="retailers" className="menu-item" href="/retailers">Retailers</a>
+        <a id="checkout" className="menu-item" href="/checkout">Check Out</a>
       </Menu>
     );
   }

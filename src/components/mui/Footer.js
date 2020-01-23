@@ -18,11 +18,11 @@ function Copyright() {
       {'.'}
       <br/>
       <br/>
-      <Link color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/">
+      <Link color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
         <FacebookIcon fontSize="large" />
       </Link>{'      '}
       <span/>
-      <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/">
+      <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
       <InstagramIcon fontSize="large"/>
       </Link>{' '}
     </Typography>
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     // marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
+    padding: theme.spacing(3, 0),
   },
 }));
 

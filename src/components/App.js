@@ -23,13 +23,6 @@ import Footer from './mui/Footer';
                 <CssBaseline />
                 <NavBar />
                 <BrowserRouter> 
-                    <Link to="/">Home</Link> <span> </span> 
-                    <Link to="/ourstory">Our Story</Link>  <span> </span> 
-                    <Link to="/products">Products</Link>  <span> </span> 
-                    <Link to="/healthbenefits">Health Benefits</Link> <span> </span> 
-                    <Link to="/retailers">Retailers</Link>  <span> </span> 
-                    <Link to="/contact">Contact</Link>  <span> </span> 
-                    <Link to="/checkout">Check Out</Link>  
                 <Switch>
                     <Route exact path = "/" component = {Home} />
                     <Route exact path = "/contact" component = {Contact} />

@@ -1,9 +1,16 @@
 /* burger menu links */
 .menu-item {
     font-family: 'Roboto', sans-serif;
-    color: red;
+    color: #DAD91C;
     font-style: bold;
     text-decoration: none;
+    border: none;
+    padding: 10px 1px;
+}
+
+.menu-item:hover {
+    color: #CFCC25;
+    font-weight: bold;
     border: none;
 }
 
@@ -12,7 +19,7 @@
     position: fixed;
     width: 36px;
     height: 30px;
-    left: 36px;
+    right: 36px;
     top: 36px;
   }
   
@@ -23,7 +30,7 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #CFCC25; 
+    background: #726c6c; 
   }
   
   /* Position and sizing of clickable cross button */
