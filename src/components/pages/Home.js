@@ -9,13 +9,15 @@ const Container = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 80vh;
+    min-height: 100vh;
     position: relative;
     padding-bottom: 72px;
+    font-family: 'Roboto', sans-serif;
 `;
 
 const SubHeading = styled.section`
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 `;
 
 
