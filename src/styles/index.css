@@ -1,3 +1,12 @@
+/* burger menu links */
+.menu-item {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    font-style: bold;
+    text-decoration: none;
+    border: none;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
@@ -14,7 +23,7 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #7ca900;
+    background: #CFCC25; 
   }
   
   /* Position and sizing of clickable cross button */
@@ -39,9 +48,14 @@
   
   /* General sidebar styles */
   .bm-menu {
+    /* background: #DAD91C; */
     background: #373a47;
     padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    font-size: 1.5em;
+    /* font-family: 'Roboto', sans-serif;
+    color: red;
+    font-style: bold;
+    text-decoration: none; */
   }
   
   /* Morph shape necessary with bubble or elastic */

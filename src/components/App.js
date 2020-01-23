@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 import Contact from './pages/Contact';
-//import NavBar from './NavBar';
 import Home from './pages/Home';
 import CheckOut from './pages/CheckOut';
 import HealthBenefits from './pages/HealthBenefits';
@@ -10,9 +9,7 @@ import Products from './pages/Products';
 import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from './mui/AppBar';
-import Example from './mui/Example';
-// import BottomNavigation from './mui/BottomNavigation';
+import NavBar from './mui/NavBar';
 import Footer from './mui/Footer';
 // import Styled from 'styled-components';
 
@@ -24,8 +21,7 @@ import Footer from './mui/Footer';
         return (
             <React.Fragment>
                 <CssBaseline />
-                <Example />
-                <AppBar />
+                <NavBar />
                 <BrowserRouter> 
                     <Link to="/">Home</Link> <span> </span> 
                     <Link to="/ourstory">Our Story</Link>  <span> </span> 
