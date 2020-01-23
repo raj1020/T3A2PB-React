@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
@@ -7,8 +7,8 @@ class NavBar extends React.Component {
 
     render () {
                 
-            return (
-            
+                return 
+                <BrowserRouter> 
                 <nav>
                     <Link to="/">Home</Link> <span> </span> 
                     <Link to="/ourstory">Our Story</Link>  <span> </span> 
@@ -18,10 +18,12 @@ class NavBar extends React.Component {
                     <Link to="/contact">Contact</Link>  <span> </span> 
                     <Link to="/checkout">Check Out</Link>  
                 </nav>
-            );
-           
+                </BrowserRouter>
 
-            
+            // return <nav>{navLinks}</nav>
+
+
+        
     }
 }
 
