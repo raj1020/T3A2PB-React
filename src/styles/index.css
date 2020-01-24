@@ -11,20 +11,20 @@
   justify-content: center;
   background-color:#CFCC25;
   width: 100%;
-  height: 10vh;
+  height: 12vh;
 }
 .footerLayer2 {
   background-color: rgb(53, 53, 56);
   color: white;
-  font-size: 9px;
+  font-size: 8px;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   text-align: center;
   padding: 3vh 0;
 }
 
 .SocialMedia {
-  padding: 2vh;
+  padding: 3vh;
 }
 
 /* Homepage button */
@@ -80,18 +80,20 @@
 /* NAVBAR */
 /* burger menu links */
 .menu-item {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Geometria-Medium', sans-serif;
     color: #DAD91C;
-    font-style: bold;
+    /* font-style: bold; */
     text-decoration: none;
     border: none;
     padding: 10px 1px;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item:active {
     color: #CFCC25;
     font-weight: bold;
+    text-decoration: none;
     border: none;
+
 }
 
 /* Position and sizing of burger button */
@@ -110,7 +112,7 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #726c6c; 
+    background: #CFCC25; 
   }
   
   /* Position and sizing of clickable cross button */
