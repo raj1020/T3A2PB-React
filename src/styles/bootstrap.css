@@ -1,0 +1,14 @@
+.ProductCardDeck {
+    justify-content: center;
+    /* background-color: red; */
+    padding: 50px;
+}
+
+.ProductCard {
+    justify-content: center;
+    margin: 50px;
+}
+
+.RowPosition {
+    justify-content: center;
+}

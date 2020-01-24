@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import api from '../../api/api'
-import BootstrapCard from '../bootstrap/BootstrapCard'
+import api from '../../api/api';
+import BootstrapCard from '../bootstrap/BootstrapCard';
 import Container from 'react-bootstrap/Container';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import './../../styles/bootstrap.css';
 
 class Products extends Component {
 
@@ -16,27 +17,21 @@ class Products extends Component {
 
         return (
         <Container>
-            <h1>Products</h1>
-            <Row>
-                <Col>
-                    <BootstrapCard className/>
-                </Col>
-                <Col>
+            <CardDeck className="ProductCardDeck">
+                <Row className="RowPosition">
+                    <BootstrapCard className="ProductCard"/>
                     <BootstrapCard />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
+                </Row>
+            </CardDeck>
+            <CardDeck className="ProductCardDeck">
+                <Row>
                     <BootstrapCard />
-                </Col>
-                <Col>
                     <BootstrapCard />
-                </Col>
-            </Row>
+                </Row>
+            </CardDeck>
         </Container>
         );
     }
 }
-
 
 export default Products;
