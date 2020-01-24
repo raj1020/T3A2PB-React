@@ -1,3 +1,42 @@
+@font-face {
+  font-family: 'Geometria-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
+}
+
+/* Header */
+.logo {
+  height: 12vh;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+/* .banner {
+  height: 14vh;
+} */
+
+.header {
+  height: 12vh;
+  background-color: white;
+  /* position: fixed; */
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Geometria-Medium', sans-serif;
+}
+
+.headerTitle {
+  position: absolute;
+  font-size: 24px;
+  top: 24px;
+  left: 100px;
+}
+
+/* NAVBAR */
 /* burger menu links */
 .menu-item {
     font-family: 'Roboto', sans-serif;
@@ -16,11 +55,11 @@
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
-    right: 36px;
-    top: 36px;
+    right: 24px;
+    top: 24px;
   }
   
   /* Color/shape of burger icon bars */

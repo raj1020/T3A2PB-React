@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import image from './../../images/background1.jpg';
+// import Header from './../header/Header';
 
 const Container = styled.section`
     text-align: center;
@@ -27,6 +28,7 @@ class Home extends React.Component {
     render () {
         return (
             <>
+            {/* <Header /> */}
             <Container>
                 <h1>OAKBROOK</h1>
                 <SubHeading>
