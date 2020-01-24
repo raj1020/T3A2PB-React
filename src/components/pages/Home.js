@@ -13,14 +13,24 @@ const Container = styled.section`
     min-height: 100vh;
     position: relative;
     padding-bottom: 72px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Geometria-Medium', sans-serif;
 `;
 
-const SubHeading = styled.section`
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+const HomeTitle = styled.section`
+    padding: 80px 0px 0px 0px;
+    font-size: 36px;
 `;
 
+const SubTitle = styled.section`
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 20px;
+`;
+
+const HomeText = styled.section`
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 15px;
+    padding: 30px 0px
+`;
 
 class Home extends React.Component {
 
@@ -30,11 +40,11 @@ class Home extends React.Component {
             <>
             {/* <Header /> */}
             <Container>
-                <h1>OAKBROOK</h1>
-                <SubHeading>
-                    <h2>Yass Valley, New South Wales</h2>
-                    <h2>All Australian, organically managed olive grove and trufferie.</h2>
-                </SubHeading>
+                <div>
+                <HomeTitle>OAKBROOK</HomeTitle>
+                <SubTitle>Yass Valley</SubTitle>
+                <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
+                </div>
             </Container>
             </>
         );
