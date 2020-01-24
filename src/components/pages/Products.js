@@ -21,6 +21,8 @@ class Products extends Component {
                 <Row className="RowPosition">
                     <BootstrapCard className="ProductCard"/>
                     <BootstrapCard />
+                    <BootstrapCard />
+                    <BootstrapCard />
                 </Row>
             </CardDeck>
             <CardDeck className="ProductCardDeck">
