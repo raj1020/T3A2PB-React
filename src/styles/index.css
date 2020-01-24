@@ -5,6 +5,23 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Homepage button */
+.btn-primary {
+  color: #fff;
+  background-color: #CFCC25;
+  background-color: cutom-color;
+  border-color: #CFCC25;
+  border-color: cutom-cor;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #DAD91C;
+  background-color: cutom-color;
+  border-color: #DAD91C;
+  border-color: cutom-cor;
+}
+
 /* Header */
 .logo {
   height: 12vh;
@@ -27,6 +44,8 @@
   width: 100%;
   z-index: 1000;
   font-family: 'Geometria-Medium', sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
 .headerTitle {

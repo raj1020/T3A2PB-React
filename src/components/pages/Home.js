@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import image from './../../images/background1.jpg';
+import Button from 'react-bootstrap/Button';
 // import Header from './../header/Header';
 
 const Container = styled.section`
@@ -23,13 +24,13 @@ const HomeTitle = styled.section`
 
 const SubTitle = styled.section`
     font-family: 'Geometria-Medium', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 `;
 
 const HomeText = styled.section`
     font-family: 'Geometria-Medium', sans-serif;
     font-size: 15px;
-    padding: 30px 0px
+    padding: 40px 0px
 `;
 
 class Home extends React.Component {
@@ -41,9 +42,10 @@ class Home extends React.Component {
             {/* <Header /> */}
             <Container>
                 <div>
-                <HomeTitle>OAKBROOK</HomeTitle>
-                <SubTitle>Yass Valley</SubTitle>
-                <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
+                    <HomeTitle>OAKBROOK</HomeTitle>
+                    <SubTitle>Yass Valley</SubTitle>
+                    <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
+                    <Button variant="primary">SHOP</Button>
                 </div>
             </Container>
             </>
