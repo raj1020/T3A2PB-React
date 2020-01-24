@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import birdseye from '../../images/birdseye.JPG';
-import oliveslandscape from '../../images/oliveslandscape.jpg';
+import olives from '../../images/olives.jpg';
 import './../../styles/index.css';
 
 class OurStory extends React.Component {
@@ -23,13 +23,13 @@ class OurStory extends React.Component {
                 </div>
                 <div className="Container1">
                     <Card className="LimitWidth">
-                        <Card.Img variant="top" src={oliveslandscape} />
-                        <Card.Title>Our Olives</Card.Title>
+                        <Card.Img variant="top" src={olives} />
+                        <Card.Title className="CardTitle">Our Olives</Card.Title>
                         <Card.Body>
                         <Card.Text>
                         <p>We manage our olive grove organically and do not use hazardous chemical poisons. We have introduced predator insects to controls pests plus implemented an organic fertiliser and mulching program. We do our own pruning by hand.</p>
                         <p>Our oil is produced from hand-picked olives harvested between ANZAC Day and the end of May each year. The olives are then pressed within 24 hours of picking.  This cold pressed oil is unfiltered, with no flavouring, no additives and no preservatives that is certified as Cold Pressed Extra Virgin Olive Oil after samples are sent away to the Department of Industry for testing. </p>
-                        <p>Once back at Oakbrook we provide the oil with the ideal environment to preserve quality and promote longevity keep it in a cool dark place and air tight.  Our olive oil is stored in our underground cellar in sealed containers with natural stable temperature that year round is between 10 to15oC.  </p>
+                        <p>Once back at Oakbrook we provide the oil with the ideal environment to preserve quality and promote longevity keep it in a cool dark place and air tight.  Our olive oil is stored in our underground cellar in sealed containers with natural stable temperature that year round is between 10 to 15 degrees.  </p>
                         </Card.Text>
                         </Card.Body>
                     </Card>

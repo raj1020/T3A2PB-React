@@ -15,6 +15,12 @@
   background-color: #CFCC25;
 }
 
+.CardTitle {
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 20px 10px 0px 20px;
+}
+
 .LimitWidth {
   max-width: 1000px;
 }

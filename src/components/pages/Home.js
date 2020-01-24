@@ -45,7 +45,7 @@ class Home extends React.Component {
                     <HomeTitle>OAKBROOK</HomeTitle>
                     <SubTitle>Yass Valley</SubTitle>
                     <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
-                    <Button variant="primary">SHOP</Button>
+                    <Button href="/products" variant="primary">SHOP</Button>
                 </div>
             </Container>
             </>
