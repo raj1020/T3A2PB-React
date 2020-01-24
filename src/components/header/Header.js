@@ -1,5 +1,4 @@
 import React from 'react'
-// import banner from '../../images/banner.png'
 import logo from '../../images/logo3.jpg'
 import './../../styles/index.css';
 

@@ -5,6 +5,26 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+.TextTitle {
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 100px 50px 50px 50px;
+  text-align: center;
+  color: white;
+  height: 20vh;
+  background-color: #CFCC25;
+}
+
+.LimitWidth {
+  max-width: 1000px;
+}
+
+.Container1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 /* Footer */
 .footerLayer1 {
   display: flex;
@@ -51,10 +71,6 @@
   left: 10px;
   top: 0;
 }
-
-/* .banner {
-  height: 14vh;
-} */
 
 .header {
   height: 12vh;
