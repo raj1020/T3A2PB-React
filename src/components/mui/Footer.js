@@ -7,7 +7,7 @@ import Link from '@material-ui/core/Link';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 // import { createMuiTheme } from '@material-ui/core/styles';
-// import styled from 'styled-components';
+import './../../styles/index.css';
 
 // const StyleContainer = styled.section`
 //   background-color: black;
@@ -24,7 +24,7 @@ function Copyright() {
       {'.'}
       <br/>
       <br/>
-      <Link color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
+      <Link className="FooterLinks" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
         <FacebookIcon fontSize="large" />
       </Link>{'      '}
       <span/>
@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'rgb(128,128,128)',
     type: 'dark',
     // marginTop: theme.spacing(8),
-    padding: theme.spacing(3, 0),
+    padding: theme.spacing(1.5, 0),
   },
 }));
 

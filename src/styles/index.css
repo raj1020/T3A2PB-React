@@ -5,8 +5,24 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Footer */
+.footerLayer1 {
+  background-color:#CFCC25;
+  width: 100%;
+  height: 10vh;
+}
+.footerLayer2 {
+  background-color: rgb(53, 53, 56);
+  color: white;
+  font-size: 9px;
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+  padding: 3vh 0;
+}
+
 /* Homepage button */
-.btn-primary {
+.btn-primary, .btn-primary:hover, .btn-primary:active {
   color: #fff;
   background-color: #CFCC25;
   background-color: cutom-color;

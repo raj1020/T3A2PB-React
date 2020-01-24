@@ -10,7 +10,7 @@ import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
-import Footer from './mui/Footer';
+import Footer from './header/Footer';
 import Header from './header/Header';
 // import Styled from 'styled-components';
 
