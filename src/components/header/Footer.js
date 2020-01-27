@@ -1,5 +1,4 @@
 import React from 'react'
-// import fbLogo from '../../images/fbLogo.png'
 import './../../styles/index.css';
 import Link from '@material-ui/core/Link';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -14,7 +13,7 @@ class Footer extends React.Component {
                     <div className="SocialMedia">
                         <Link color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
                         <FacebookIcon fontSize="large" />
-                        </Link>{'      '}
+                        </Link>{'          '}
                         <span/>
                         <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
                         <InstagramIcon fontSize="large"/>
@@ -22,7 +21,8 @@ class Footer extends React.Component {
                     </div>
                 </div>
                 <div className="footerLayer2">
-                    <div className="FooterText">Copyright Oakbrook Yass Valley 2020</div>
+                    <div className="FooterText">Copyright Oakbrook Yass Valley{' '}{new Date().getFullYear()}{'.'}
+                    </div>
                 </div>
             </>
         );
