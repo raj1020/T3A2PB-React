@@ -72,14 +72,14 @@
 
 /* Header */
 .logo {
-  height: 12vh;
+  height: 80px;
   position: absolute;
   left: 10px;
   top: 0;
 }
 
 .header {
-  height: 12vh;
+  height: 80px;
   background-color: white;
   /* position: fixed; */
   position: absolute;
