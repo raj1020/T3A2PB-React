@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route, Link} from "react-router-dom";
 import { slide as Menu } from 'react-burger-menu';
 import './../../styles/index.css'
 
@@ -11,13 +12,13 @@ class NavBar extends React.Component {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu right width={ 250 }>
-        <a id="home" className="menu-item" href="/">HOME</a>
-        <a id="about" className="menu-item" href="/ourstory">OUR STORY</a>
-        <a id="products" className="menu-item" href="/products">PRODUCTS</a>
-        <a id="contact" className="menu-item" href="/contact">CONTACT</a>
-        <a id="healthbenefits" className="menu-item" href="/healthbenefits">HEALTH BENEFITS</a>
-        <a id="retailers" className="menu-item" href="/retailers">RETAILERS</a>
-        <a id="checkout" className="menu-item" href="/checkout">CHECK OUT</a>
+        <Link to="/" id="home" className="menu-item">Home</Link>
+        <Link to="/ourstory" id="about" className="menu-item">Our Story</Link>
+        <Link to="/products" id="products" className="menu-item">Products</Link>
+        <Link to="/contact" id="contact" className="menu-item">Contact</Link>
+        <Link to="/healthbenefits" id="healthbenefits" className="menu-item">Health Benefits</Link>
+        <Link to="/retailers" id="retailers" className="menu-item">Retailers</Link>
+        <Link to="/checkout" id="checkout" className="menu-item">Checkout</Link>
       </Menu>
     );
   }

@@ -23,18 +23,18 @@ import Header from './header/Header';
             <React.Fragment>
                 <CssBaseline />
                 <Header />
-                <NavBar />
                 <BrowserRouter> 
-                <Switch>
-                    <Route exact path = "/" component = {Home} />
-                    <Route exact path = "/contact" component = {Contact} />
-                    <Route exact path = "/checkout" component = {CheckOut} />
-                    <Route exact path = "/healthbenefits" component = {HealthBenefits} />
-                    <Route exact path = "/ourstory" component = {OurStory} />
-                    <Route exact path = "/products" component = {Products} />
-                    <Route exact path = "/retailers" component = {Retailers} />
-                    <Route exact path = "/showproduct" component = {ShowProduct} />
-                </Switch>
+                <NavBar />
+                    <Switch>
+                        <Route exact path = "/" component = {Home} />
+                        <Route exact path = "/contact" component = {Contact} />
+                        <Route exact path = "/checkout" component = {CheckOut} />
+                        <Route exact path = "/healthbenefits" component = {HealthBenefits} />
+                        <Route exact path = "/ourstory" component = {OurStory} />
+                        <Route exact path = "/products" component = {Products} />
+                        <Route exact path = "/retailers" component = {Retailers} />
+                        <Route exact path = "/showproduct" component = {ShowProduct} />
+                    </Switch>
                 </BrowserRouter>
                 <Footer />
             </React.Fragment>
