@@ -3,17 +3,19 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroupItem';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import logoSm from '../../images/logo-sm.png'
+import './../../styles/bootstrap.css';
+
 
 class BootstrapCard extends React.Component {
     
     render() {
         return (
-            <Card style={{ width: '18rem' }}>
+            <Card className="ProductCard">
                 <Card.Img variant="top" src={logoSm} />
                 <Card.Body>
                     <Card.Title>Product 1</Card.Title>
                     <Card.Text>
-                    Olive Oil
+                        Olive Oil
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">

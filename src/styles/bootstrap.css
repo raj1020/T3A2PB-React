@@ -1,12 +1,11 @@
 .ProductCardDeck {
-    justify-content: center;
-    /* background-color: red; */
-    padding: 50px;
+    justify-content: space-around;
+    padding: 50px 20px;
 }
 
 .ProductCard {
-    justify-content: center;
     margin: 50px;
+    min-width: 250px;
 }
 
 .RowPosition {
