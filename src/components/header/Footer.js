@@ -1,6 +1,7 @@
 import React from 'react'
 import './../../styles/index.css';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
+import { Link } from "react-router-dom";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
@@ -11,17 +12,18 @@ class Footer extends React.Component {
             <>
                 <div className="footerLayer1">
                     <div className="SocialMedia">
-                        <Link color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
+                        <a className="socialIcons" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
                         <FacebookIcon fontSize="large" />
-                        </Link>{'          '}
+                        </a>{'          '}
                         <span/>
-                        <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
+                        <a className="socialIcons" color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
                         <InstagramIcon fontSize="large"/>
-                        </Link>{' '}
+                        </a>{' '}
                     </div>
                 </div>
                 <div className="footerLayer2">
-                    <div className="FooterText">Copyright Oakbrook Yass Valley{' '}{new Date().getFullYear()}{'.'}
+                    <div className="FooterText">
+                        Copyright <Link to="/" className="footerLink" >Oakbrook Yass Valley</Link>{' '}{new Date().getFullYear()}{'.'}
                     </div>
                 </div>
             </>
@@ -30,3 +32,4 @@ class Footer extends React.Component {
 }
 
 export default Footer;
+

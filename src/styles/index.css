@@ -55,8 +55,23 @@
   padding: 10px 0 20px 0;
 }
 
-.SocialMedia {
-  padding: 30px;
+.footerLink {
+  text-decoration: none;
+  color: white;
+}
+
+.footerLink:hover {
+  text-decoration: none;
+}
+
+.socialIcons {
+  text-decoration: none;
+  color: rgb(53, 53, 56);;
+}
+
+.socialIcons:hover {
+  text-decoration: none;
+  color: #0069D9;
 }
 
 /* Homepage button */
@@ -168,7 +183,7 @@
     /* background: #DAD91C; */
     background: #373a47;
     padding: 2.5em 1.5em 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     /* font-family: 'Roboto', sans-serif;
     color: red;
     font-style: bold;

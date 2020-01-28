@@ -22,8 +22,8 @@ import Header from './header/Header';
         return (
             <React.Fragment>
                 <CssBaseline />
-                <Header />
                 <BrowserRouter> 
+                <Header />
                 <NavBar />
                     <Switch>
                         <Route exact path = "/" component = {Home} />
@@ -35,8 +35,8 @@ import Header from './header/Header';
                         <Route exact path = "/retailers" component = {Retailers} />
                         <Route exact path = "/showproduct" component = {ShowProduct} />
                     </Switch>
+                    <Footer />
                 </BrowserRouter>
-                <Footer />
             </React.Fragment>
             
         )
