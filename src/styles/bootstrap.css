@@ -11,3 +11,7 @@
 .RowPosition {
     justify-content: center;
 }
+
+.Link, .Link:hover, Link:active {
+    text-decoration: none;
+}

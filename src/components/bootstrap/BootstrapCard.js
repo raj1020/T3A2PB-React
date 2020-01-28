@@ -9,11 +9,13 @@ import './../../styles/bootstrap.css';
 class BootstrapCard extends React.Component {
     
     render() {
+        const { productName }=this.props;
+
         return (
             <Card className="ProductCard">
-                <Card.Img variant="top" src={logoSm} />
+                <a href="/"><Card.Img variant="top" src={logoSm} /></a>
                 <Card.Body>
-                    <Card.Title>Product 1</Card.Title>
+                    <a className="Link" href="/"><Card.Title>{productName}</Card.Title></a>
                     <Card.Text>
                         Olive Oil
                     </Card.Text>

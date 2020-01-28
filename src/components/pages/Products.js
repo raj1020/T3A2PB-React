@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import api from '../../api/api';
 import BootstrapCard from '../bootstrap/BootstrapCard';
-// import Container from 'react-bootstrap/Container';
 import CardDeck from 'react-bootstrap/CardDeck';
-// import Row from 'react-bootstrap/Row';
 import './../../styles/bootstrap.css';
 
 class Products extends Component {
@@ -14,13 +12,24 @@ class Products extends Component {
     }
 
     render () {
+        const Products = [
+            {_id:'1', name: 'Extra Virgin Olive Oil 250ml', price: 11.00, count: 10, available: true },
+            {_id:'2', name: 'Extra Virgin Olive Oil 500ml', price: 16.00, count: 10, available: true },
+            {_id:'3', name: 'Extra Virgin Olive Oil 3l', price: 65.00, count: 10, available: true },
+            {_id:'4', name: 'Extra Virgin Olive Oil 20l', price: 230.00, count: 10, available: false },
+            {_id:'5', name: 'Jar of Black Olives 200g', price: 8.00, count: 10, available: true },
+            {_id:'6', name: 'Jar of Green Olives 200g', price: 8.00, count: 10, available: true }
+        ]
 
         return (
             <CardDeck className="ProductCardDeck">
-                    <BootstrapCard className="ProductCard"/>
-                    <BootstrapCard className="ProductCard"/>
-                    <BootstrapCard className="ProductCard"/>
-                    <BootstrapCard className="ProductCard"/>
+                { Products.map((product) =>  {
+                    return (
+                    <BootstrapCard productName={product.name} />
+                    );
+                })
+            }
+                    
             </CardDeck>
         );
     }
