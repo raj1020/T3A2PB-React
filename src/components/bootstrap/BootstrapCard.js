@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroupItem';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
@@ -18,17 +19,12 @@ class BootstrapCard extends React.Component {
 
         return (
             <Card className="ProductCard">
-                <a href="/"><Card.Img variant="top" src={logoSm} /></a>
+                <Link to="/"><Card.Img variant="top" src={logoSm} /></Link>
                 <Card.Body>
-                    <a className="Link" href="/"><Card.Title>{productName}</Card.Title></a>
+                    <Link to="/" className="Link"><Card.Title>{productName}</Card.Title></Link>
                     <Card.Link href="#">${productPrice}.00</Card.Link>
-                    <Card.Link href="#">Buy</Card.Link>
+                    <Card.Link href="#">Add to Cart</Card.Link>
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroupItem>Extra Virgin Olive Oil</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                </ListGroup>
             </Card>
         );
     }

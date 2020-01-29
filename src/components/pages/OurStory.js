@@ -14,7 +14,7 @@ class OurStory extends React.Component {
                 <h1 className="TextTitle">Our Story</h1>
                 <div className="Container1">
                     <Card className="LimitWidth">
-                        <Card.Img alt="birdseye view of Oakbrook Yall Valley farm" variant="top" src={birdseye} />
+                        <Card.Img className="cardImage" alt="birdseye view of Oakbrook y Valley farm" variant="top" src={birdseye} />
                         <Card.Title className="CardTitle">The Farm</Card.Title>
                         <Card.Body>
                         <Card.Text>
@@ -24,7 +24,7 @@ class OurStory extends React.Component {
                         </Card.Body>
                     </Card>
                     <Card className="LimitWidth">
-                        <Card.Img alt="close-up of freshly picked olives from Oakbrook olive grove NSW" variant="top" src={olives} />
+                        <Card.Img className="cardImage" alt="close-up of freshly picked olives from Oakbrook olive grove NSW" variant="top" src={olives} />
                         <Card.Title className="CardTitle">Olives</Card.Title>
                         <Card.Body>
                         <Card.Text>
@@ -33,7 +33,7 @@ class OurStory extends React.Component {
                         </Card.Body>
                     </Card>
                     <Card className="LimitWidth">
-                        <Card.Img alt="freshly pressed Oakbrook olive oil in production" variant="top" src={production} />
+                        <Card.Img className="cardImage" alt="freshly pressed Oakbrook olive oil in production" variant="top" src={production} />
                         <Card.Title className="CardTitle">Olive Oil</Card.Title>
                         <Card.Body>
                         <Card.Text>
@@ -45,7 +45,7 @@ class OurStory extends React.Component {
                         </Card.Body>
                     </Card>
                     <Card className="LimitWidth">
-                        <Card.Img alt="Freshly picked truffles from Oakbrook Yass Vally NSW" variant="top" src={truffles} />
+                        <Card.Img className="cardImage"  alt="Freshly picked truffles from Oakbrook Yass Vally NSW" variant="top" src={truffles} />
                         <Card.Title className="CardTitle">Truffles</Card.Title>
                         <Card.Body>
                         <Card.Text>

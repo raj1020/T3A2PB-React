@@ -5,6 +5,12 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Health benefits page */
+.sourceReference {
+  font-style: italic;
+}
+
+
 .TextTitle {
   font-family: 'Geometria-Medium', sans-serif;
   font-size: 24px;
@@ -22,9 +28,15 @@
   margin-bottom: 0px;
 }
 
+.cardImage {
+  max-height: 500px;
+}
+
 .LimitWidth {
   max-width: 700px;
   margin-bottom: 10px;
+  /* display: flex; */
+  /* flex-direction: row; */
 }
 
 .Container1 {

@@ -24,11 +24,11 @@ function Copyright() {
       {'.'}
       <br/>
       <br/>
-      <Link className="FooterLinks" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
+      <Link className="FooterLinks" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank" rel="noopener noreferrer">
         <FacebookIcon fontSize="large" />
       </Link>{'      '}
       <span/>
-      <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
+      <Link color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank" rel="noopener noreferrer">
       <InstagramIcon fontSize="large"/>
       </Link>{' '}
     </Typography>

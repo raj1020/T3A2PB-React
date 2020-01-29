@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import image from './../../images/background1.jpg';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 // import Header from './../header/Header';
 
 const Container = styled.section`
@@ -45,7 +46,7 @@ class Home extends React.Component {
                     <HomeTitle>OAKBROOK</HomeTitle>
                     <SubTitle>Yass Valley</SubTitle>
                     <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
-                    <Button href="/products" variant="primary">SHOP</Button>
+                    <Link to="/products"><Button variant="primary">SHOP</Button></Link>
                 </div>
             </Container>
             </>
