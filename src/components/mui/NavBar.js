@@ -18,7 +18,7 @@ class NavBar extends React.Component {
         <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         <Link to="/healthbenefits" id="healthbenefits" className="menu-item">Health Benefits</Link>
         <Link to="/retailers" id="retailers" className="menu-item">Retailers</Link>
-        <Link to="/checkout" id="checkout" className="menu-item">Checkout</Link>
+        <Link to="/checkout" id="checkout" className="menu-item">Shopping Cart</Link>
       </Menu>
     );
   }

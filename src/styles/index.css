@@ -5,6 +5,13 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Retailers page */
+.subTitle {
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
 /* Health benefits page */
 .sourceReference {
   font-style: italic;
