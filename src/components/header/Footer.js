@@ -12,11 +12,11 @@ class Footer extends React.Component {
             <>
                 <div className="footerLayer1">
                     <div className="SocialMedia">
-                        <a className="socialIcons" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank">
+                        <a className="socialIcons" color="inherit" href="https://www.facebook.com/Oakbrook-Yass-Valley-316970248851172/" target="_blank" rel="noopener noreferrer">
                         <FacebookIcon fontSize="large" />
                         </a>{'          '}
                         <span/>
-                        <a className="socialIcons" color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank">
+                        <a className="socialIcons" color="inherit" href="https://www.instagram.com/oakbrookyassvalley/" target="_blank" rel="noopener noreferrer">
                         <InstagramIcon fontSize="large"/>
                         </a>{' '}
                     </div>
