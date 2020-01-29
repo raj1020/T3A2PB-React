@@ -59,6 +59,7 @@
   align-content: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  min-height: 60vh;
 }
 
 /* Footer */

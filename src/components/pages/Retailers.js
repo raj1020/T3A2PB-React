@@ -36,6 +36,30 @@ class Retailers extends React.Component {
                         <Card.Link href="https://www.google.com/maps/place/THE+BIG+GREEN+CUP+CAFE+%7C+EMPORIUM+%7C+REDEFINED/@-35.2565292,149.4385459,17z/data=!4m12!1m6!3m5!1s0x6b165e69cde30e8b:0xb8e53cfc55cee346!2sTHE+BIG+GREEN+CUP+CAFE+%7C+EMPORIUM+%7C+REDEFINED!8m2!3d-35.2565292!4d149.4407346!3m4!1s0x6b165e69cde30e8b:0xb8e53cfc55cee346!8m2!3d-35.2565292!4d149.4407346" target="_blank" rel="noopener noreferrer">View in Google Maps</Card.Link>
                     </Card.Body>
                     </Card>
+                    <Card className="retailerCard">
+                    <Card.Body>
+                        <Card.Title>The Grumpy Baker</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">Castle Cove</Card.Subtitle>
+                        <Card.Text>
+                            16 Deepwater Rd<br />
+                            Castle Cove<br />
+                            NSW 2069<br />
+                        </Card.Text>
+                        <Card.Link href="https://www.google.com/maps/place/The+Grumpy+Baker/@-33.7826713,151.1984023,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12a917a509647b:0xef155dd5fb1e53f5!8m2!3d-33.7826713!4d151.200591" target="_blank" rel="noopener noreferrer">View in Google Maps</Card.Link>
+                    </Card.Body>
+                    </Card>
+                    <Card className="retailerCard">
+                    <Card.Body>
+                        <Card.Title>The Grumpy Baker</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">Waverton</Card.Subtitle>
+                        <Card.Text>
+                            85 Bay Rd<br />
+                            Waverton<br />
+                            NSW 2060<br />
+                        </Card.Text>
+                        <Card.Link href="https://www.google.com/maps/place/The+Grumpy+Baker+Waverton/@-33.8380372,151.1937833,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12aefa5e19db81:0x396161b52357b02d!8m2!3d-33.8380372!4d151.195972" target="_blank" rel="noopener noreferrer">View in Google Maps</Card.Link>
+                    </Card.Body>
+                    </Card>
                 </div>
             </>
         );
