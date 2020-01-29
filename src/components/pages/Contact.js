@@ -17,18 +17,18 @@ class Contact extends React.Component {
                 <div className="Container1">
                 <Card className="contactCard">
                     <Card.Body>
-                        <Card.Title>Phone</Card.Title>
+                        <Card.Title>Phone:</Card.Title>
                         <Card.Text>
-                            Rick Martin 0417 229 810<br />
-                            Fiona Martin 0408 409 558<br />
+                            <p className="contactText">Rick Martin 0417 229 810</p>
+                            <p className="contactText">Fiona Martin 0408 409 558</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
                 <Card className="contactCard">
                     <Card.Body>
-                    <Card.Title>Email</Card.Title>
+                    <Card.Title>Email:</Card.Title>
                         <Card.Text>
-                            oakbrookyassvalley@gmail.com
+                            <p className="contactText">oakbrookyassvalley@gmail.com</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
