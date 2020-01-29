@@ -5,6 +5,12 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Contact page */
+.contactCard {
+  min-width: 300px;
+  margin: 20px;
+}
+
 /* Retailers page */
 .subTitle {
     font-family: 'Geometria-Medium', sans-serif;
