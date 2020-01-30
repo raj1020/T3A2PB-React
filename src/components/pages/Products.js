@@ -13,20 +13,21 @@ import '../../styles/cart.css';
     render(){
         let itemList = this.props.items.map(item=>{
             return(
-                <div className="card" key={item._id}>
+                <div className="productCard" key={item._id}>
                         <div className="card-image">
                             <img src={item.img} alt={item.name}/>
-                            <span className="card-title">{item.name}</span>
+                            <div className="card-title">{item.name}</div>
                             <span 
                                 to="/" 
                                 className="btn-floating halfway-fab waves-effect waves-light red" 
                                 onClick={()=>{this.handleClick(item._id)}}>
-                                    <i className="material-icons">add</i>
+                                    <i className="material-icons">add to cart</i>
                             </span>
+                            <span><b>Price: {item.price}$</b></span>
                         </div>
 
                         <div className="card-content">
-                            <p>{item.description}</p>
+                            {/* <p>{item.description}</p> */}
                             <p><b>Price: {item.price}$</b></p>
                         </div>
                  </div>
@@ -35,10 +36,13 @@ import '../../styles/cart.css';
         })
 
         return(
-            <div className="container">
-                <h3 className="center">Our items</h3>
-                <div className="box">
-                    {itemList}
+            <div>
+                <h1 className="TextTitle">Products</h1>
+                <div className="container">
+                    <h3 className="center">Our items</h3>
+                    <div className="box">
+                        {itemList}
+                    </div>
                 </div>
             </div>
         )
