@@ -36,26 +36,6 @@ import '../../styles/cart.css';
                     </div>
                 </Card.Body>
                 </Card>
-            
-
-                // <Card className="ProductCard" key={item._id}>
-                //         <div className="card-image">
-                //             <img src={item.img} alt={item.name}/>
-                //             <div className="card-title">{item.name}</div>
-                //             <span 
-                //                 to="/" 
-                //                 className="btn-floating halfway-fab waves-effect waves-light red" 
-                //                 onClick={()=>{this.handleClick(item._id)}}>
-                //                     <i className="material-icons">add</i>
-                //             </span>
-                //             <span><b>Price: {item.price}$</b></span>
-                //         </div>
-
-                //         <div className="card-content">
-                //             {/* <p>{item.description}</p> */}
-                //             <p><b>Price: {item.price}$</b></p>
-                //         </div>
-                //  </Card>
 
             )
         })
@@ -63,7 +43,7 @@ import '../../styles/cart.css';
         return(
             <div>
                 <h1 className="TextTitle">Products</h1>
-                <div className="container">
+                <div className="productContainer">
                     <div className="box">
                         {itemList}
                     </div>

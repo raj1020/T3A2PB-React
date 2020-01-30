@@ -1,6 +1,11 @@
-.container {
+.productContainer {
     min-height: 60vh;
     margin-top: 30px;
+}
+
+.cartContainer {
+    min-height: 60vh;
+    margin-top: 10px;
 }
 
 .box{
@@ -37,12 +42,17 @@
     margin: 20px;
 }
 
+.cartCard{
+    padding: 20px;
+    margin: 0 20px;
+}
+
 .card .card-image .card-title{
     color: black;
     font-weight: 400
 }
 .cart{
-    margin-top:40px;
+    margin-top: 20px;
 }
 .collection .collection-item{
     display: flex;
