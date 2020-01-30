@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import CheckOut from './pages/CheckOut';
+// import CheckOut from './pages/CheckOut';
 import HealthBenefits from './pages/HealthBenefits';
 import OurStory from './pages/OurStory';
 import Products from './pages/Products';
@@ -12,7 +12,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
-import ShoppingCart from './pages/ShoppingCart';
+import Cart from './pages/Cart';
 // import Styled from 'styled-components';
 
 
@@ -29,7 +29,7 @@ import ShoppingCart from './pages/ShoppingCart';
                     <Switch>
                         <Route exact path = "/" component = {Home} />
                         <Route exact path = "/contact" component = {Contact} />
-                        <Route exact path = "/shoppingcart" component = {ShoppingCart} />
+                        <Route exact path = "/shoppingcart" component = {Cart} />
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />
