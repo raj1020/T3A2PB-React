@@ -56,14 +56,17 @@ class Cart extends Component{
                 <p>Nothing in cart</p>
              )
        return(
-            <div className="container">
-                <div className="cart">
-                    <h5>You have ordered:</h5>
-                    <ul className="collection">
-                        {addedItems}
-                    </ul>
-                </div> 
-                <Total />          
+            <div>
+                <h1 className="TextTitle">Shopping Cart</h1>
+                <div className="container">
+                    <div className="cart">
+                        <h5>You have ordered:</h5>
+                        <ul className="collection">
+                            {addedItems}
+                        </ul>
+                    </div> 
+                    <Total />          
+                </div>
             </div>
        )
     }

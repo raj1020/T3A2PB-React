@@ -21,7 +21,7 @@ import '../../styles/cart.css';
                                 to="/" 
                                 className="btn-floating halfway-fab waves-effect waves-light red" 
                                 onClick={()=>{this.handleClick(item._id)}}>
-                                    <i className="material-icons">add to cart</i>
+                                    <i className="material-icons">add</i>
                             </span>
                             <span><b>Price: {item.price}$</b></span>
                         </div>
