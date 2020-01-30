@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Total from '../cart/Total'
 import { removeItem,addQuantity,subtractQuantity} from '../../actions/cartActions'
 import '../../styles/cart.css';
 
@@ -28,8 +29,9 @@ class Cart extends Component{
                        
                         <li className="collection-item avatar" key={item._id}>
                                     <div className="item-img"> 
-                                        <img src={item.img} alt={item.img}/>
-                                    </div>                         
+                                        <img src={item.img} alt={item.img} className=""/>
+                                    </div>
+                                
                                     <div className="item-desc">
                                         <span className="title">{item.name}</span>
                                         <p>{item.description}</p>
@@ -42,14 +44,16 @@ class Cart extends Component{
                                             <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item._id)}}>arrow_drop_down</i></Link>
                                         </div>
                                         <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item._id)}}>Remove</button>
-                                    </div>                                
-                                </li>                
+                                    </div>
+                                    
+                                </li>
+                         
                     )
                 })
             ):
 
              (
-                <p>Nothing.</p>
+                <p>Nothing in cart</p>
              )
        return(
             <div className="container">
@@ -58,14 +62,18 @@ class Cart extends Component{
                     <ul className="collection">
                         {addedItems}
                     </ul>
-                </div>      
+                </div> 
+                <Total />          
             </div>
        )
     }
 }
+
+
 const mapStateToProps = (state)=>{
     return{
-        items: state.addedItems
+        items: state.addedItems,
+        //addedItems: state.addedItems
     }
 }
 const mapDispatchToProps = (dispatch)=>{

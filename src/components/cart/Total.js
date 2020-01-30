@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import '../../styles/cart.css';
 
 class Total extends Component{
     

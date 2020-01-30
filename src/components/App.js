@@ -29,7 +29,7 @@ import Cart from './pages/Cart';
                     <Switch>
                         <Route exact path = "/" component = {Home} />
                         <Route exact path = "/contact" component = {Contact} />
-                        <Route exact path = "/shoppingcart" component = {Cart} />
+                        <Route exact path = "/cart" component = {Cart} />
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />
