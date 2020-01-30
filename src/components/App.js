@@ -12,6 +12,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
+import ShoppingCart from './pages/ShoppingCart';
 // import Styled from 'styled-components';
 
 
@@ -28,7 +29,7 @@ import Header from './header/Header';
                     <Switch>
                         <Route exact path = "/" component = {Home} />
                         <Route exact path = "/contact" component = {Contact} />
-                        <Route exact path = "/checkout" component = {CheckOut} />
+                        <Route exact path = "/shoppingcart" component = {ShoppingCart} />
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />

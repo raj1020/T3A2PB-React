@@ -1,40 +1,52 @@
-import React, {Component} from 'react';
-import api from '../../api/api';
-import BootstrapCard from '../bootstrap/BootstrapCard';
-import CardDeck from 'react-bootstrap/CardDeck';
-import './../../styles/bootstrap.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { addToCart } from '../../actions/cartActions'
 
-class Products extends Component {
-
-    componentDidMount = async ()=>{
-        const response = await api.get('/user')
-        console.log(response.data[0])
+ class Products extends Component{
+    
+    handleClick = (_id)=>{
+        this.props.addToCart(_id); 
     }
 
-    render () {
+    render(){
+        let itemList = this.props.items.map(item=>{
+            return(
+                <div className="card" key={item._id}>
+                        <div className="card-image">
+                            <img src={item.img} alt={item.title}/>
+                            <span className="card-title">{item.title}</span>
+                            <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item._id)}}><i className="material-icons">add</i></span>
+                        </div>
 
-        const Products = [
-            {_id:'1', name: 'Extra Virgin Olive Oil 250ml', description:"Extra virgin olive oil", price: 11.00, size: "250mL", count: 10, available: true },
-            {_id:'2', name: 'Extra Virgin Olive Oil 500ml', description:"Extra virgin olive oil", price: 16.00, count: 10, size: "500mL", available: true },
-            {_id:'3', name: 'Extra Virgin Olive Oil 3L', description:"Extra virgin olive oil", price: 65.00, count: 10, size: "3L", available: true },
-            {_id:'4', name: 'Extra Virgin Olive Oil 20L', description:"Extra virgin olive oil", price: 230.00, count: 10, size: "20L", available: false },
-            {_id:'5', name: 'Jar of Black Olives 200g', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true },
-            {_id:'6', name: 'Jar of Green Olives 200g', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true }
-        ]
+                        <div className="card-content">
+                            <p>{item.desc}</p>
+                            <p><b>Price: {item.price}$</b></p>
+                        </div>
+                 </div>
 
-        return (
-            <CardDeck className="ProductCardDeck">
-                { Products.map((product) =>  {
+            )
+        })
 
-                    return (
-                    <BootstrapCard productName={product.name} productPrice={product.price} productSize={product.size}/>
-                    );
-                })
-            }
-                    
-            </CardDeck>
-        );
+        return(
+            <div className="container">
+                <h3 className="center">Our items</h3>
+                <div className="box">
+                    {itemList}
+                </div>
+            </div>
+        )
+    }
+}
+const mapStateToProps = (state)=>{
+    return {
+      items: state.items
+    }
+  }
+const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        addToCart: (_id)=>{dispatch(addToCart(_id))}
     }
 }
 
-export default Products;
+export default connect(mapStateToProps,mapDispatchToProps)(Products)
