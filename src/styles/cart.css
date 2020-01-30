@@ -5,7 +5,7 @@
 
 .box{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .material-icons{
@@ -13,11 +13,9 @@
     cursor: pointer;
 }
 
-.productCard{
-    /* width: 300px; */
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+.ProductCard{
+    padding: 20px;
+    margin: 20px;
 }
 
 .card .card-image .card-title{

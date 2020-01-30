@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from '../../actions/cartActions'
+import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
 import '../../styles/cart.css';
 
 
@@ -13,24 +15,39 @@ import '../../styles/cart.css';
     render(){
         let itemList = this.props.items.map(item=>{
             return(
-                <div className="productCard" key={item._id}>
-                        <div className="card-image">
-                            <img src={item.img} alt={item.name}/>
-                            <div className="card-title">{item.name}</div>
-                            <span 
-                                to="/" 
-                                className="btn-floating halfway-fab waves-effect waves-light red" 
-                                onClick={()=>{this.handleClick(item._id)}}>
-                                    <i className="material-icons">add</i>
-                            </span>
-                            <span><b>Price: {item.price}$</b></span>
-                        </div>
+                <Card className="ProductCard" key={item._id}>
+                <Link to="/"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
+                <Card.Body>
+                    <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
+                    <Card.Text>${item.price}.00</Card.Text>
+                    <span 
+                        to="/" 
+                        className="btn-floating halfway-fab waves-effect waves-light red" 
+                        onClick={()=>{this.handleClick(item._id)}}>
+                        <i className="material-icons">add</i>
+                    </span>
+                </Card.Body>
+                </Card>
+            
 
-                        <div className="card-content">
-                            {/* <p>{item.description}</p> */}
-                            <p><b>Price: {item.price}$</b></p>
-                        </div>
-                 </div>
+                // <Card className="ProductCard" key={item._id}>
+                //         <div className="card-image">
+                //             <img src={item.img} alt={item.name}/>
+                //             <div className="card-title">{item.name}</div>
+                //             <span 
+                //                 to="/" 
+                //                 className="btn-floating halfway-fab waves-effect waves-light red" 
+                //                 onClick={()=>{this.handleClick(item._id)}}>
+                //                     <i className="material-icons">add</i>
+                //             </span>
+                //             <span><b>Price: {item.price}$</b></span>
+                //         </div>
+
+                //         <div className="card-content">
+                //             {/* <p>{item.description}</p> */}
+                //             <p><b>Price: {item.price}$</b></p>
+                //         </div>
+                //  </Card>
 
             )
         })
@@ -39,7 +56,6 @@ import '../../styles/cart.css';
             <div>
                 <h1 className="TextTitle">Products</h1>
                 <div className="container">
-                    <h3 className="center">Our items</h3>
                     <div className="box">
                         {itemList}
                     </div>
