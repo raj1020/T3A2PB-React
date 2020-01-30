@@ -8,9 +8,28 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.material-icons{
-    font-size: 2.4em;
+
+.addToCart {
+    font-family: 'Geometria-Medium', sans-serif;
+    background-color: #CFCC25;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
     cursor: pointer;
+}
+
+.addToCart:hover {
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.sizePrice {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .ProductCard{

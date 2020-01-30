@@ -19,13 +19,21 @@ import '../../styles/cart.css';
                 <Link to="/"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
                 <Card.Body>
                     <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
-                    <Card.Text>${item.price}.00</Card.Text>
-                    <span 
+                    <div className="sizePrice">
+                        <Card.Text>{item.size}</Card.Text>
+                        <Card.Text>${item.price}.00</Card.Text>
+                    </div>
+                    <div 
                         to="/" 
-                        className="btn-floating halfway-fab waves-effect waves-light red" 
-                        onClick={()=>{this.handleClick(item._id)}}>
-                        <i className="material-icons">add</i>
-                    </span>
+                        className="addToCart" 
+                        onClick={()=>{
+                            this.handleClick(item._id)
+                            alert(`${item.size} ${item.name} added to cart`)
+                            }
+                        }
+                    >
+                        <div>+ Add to Cart</div>
+                    </div>
                 </Card.Body>
                 </Card>
             
