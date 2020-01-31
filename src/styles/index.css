@@ -5,6 +5,18 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Checkout form */
+.formContainer {
+  min-height: 70vh;
+  padding: 100px 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.inputBox {
+  width: 320px;
+}
+
 /* Contact page */
 .contactCard {
   min-width: 300px;
