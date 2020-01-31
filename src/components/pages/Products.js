@@ -16,9 +16,9 @@ import '../../styles/cart.css';
         let itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
-                <Link to="/"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
+                <Link to="/ShowProduct"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
                 <Card.Body>
-                    <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
+                    <Link to="/ShowProduct" className="Link"><Card.Title>{item.name}</Card.Title></Link>
                     <div className="sizePrice">
                         <Card.Text>{item.size}</Card.Text>
                         <Card.Text>${item.price}.00</Card.Text>

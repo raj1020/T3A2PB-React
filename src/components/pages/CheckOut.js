@@ -18,7 +18,11 @@ class CheckOut extends Component {
           suburb: '',
           state: '',
           postcode: '',
-            
+          billingOne: '',
+          bilingTwo: '',
+          billingSuburb:'',
+          billingState: '',
+          billingPostcode: ''
         };
     
         this.handleInputChange = this.handleInputChange.bind(this);
