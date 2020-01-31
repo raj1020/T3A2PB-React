@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
+import Table from 'react-bootstrap/Table';
 import Total from '../cart/Total';
 import { removeItem,addQuantity,subtractQuantity} from '../../actions/cartActions';
 import '../../styles/cart.css';
@@ -28,25 +28,28 @@ class Cart extends Component{
                 this.props.items.map(item=>{
                     return(
                        
-                        <li className="collection-item avatar" key={item._id}>
-                            <Card className="cartCard" key={item._id}>
-                            <Card.Body>
-                                <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
-                                <div className="sizePrice">
-                                    <Card.Text>{item.size}</Card.Text>
-                                    <Card.Text>${item.price}.00</Card.Text>
-                                </div>
-                                <p>
-                                    <b>Quantity: {item.quantity}</b> 
-                                </p>
-                                <div className="add-remove">
+                        <li className="purchaseItem" key={item._id}>
+                            <Table className="tableHeader" striped bordered hover>
+                                <tbody>
+                                    <tr>
+                                    <td>
+                                        <span className="add-remove">
                                             <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item._id)}}>arrow_drop_up</i></Link>
                                             <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item._id)}}>arrow_drop_down</i></Link>
-                                </div>
-                                <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item._id)}}>Remove</button>
-                            </Card.Body>
-                            </Card>
-                                    
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span>{item.quantity}</span>
+
+                                    </td>
+                                    <td>{item.size} {item.name}</td>
+                                    <td>${item.price}.00</td>
+                                    <td>                                
+                                        <button onClick={()=>{this.handleRemove(item._id)}}>Remove</button>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </Table>                                    
                         </li>
                          
                     )
@@ -62,6 +65,16 @@ class Cart extends Component{
                 <div className="cartContainer">
                     <div className="cart">
                         <h5 className="subTitle">Your order:</h5>
+                        <Table className="tableHeader" striped bordered hover>
+                                <thead>
+                                    <tr>
+                                    <th colSpan="2">Quantity</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                    </tr>
+                                </thead>
+                        </Table>
                         <ul className="collection">
                             {addedItems}
                         </ul>

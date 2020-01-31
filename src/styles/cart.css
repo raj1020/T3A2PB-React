@@ -6,6 +6,8 @@
 .cartContainer {
     min-height: 60vh;
     margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .box{
@@ -47,6 +49,8 @@
     margin: 0 20px;
 }
 
+
+
 .card .card-image .card-title{
     color: black;
     font-weight: 400
@@ -54,21 +58,36 @@
 .cart{
     margin-top: 20px;
 }
-.collection .collection-item{
-    display: flex;
+
+.collection {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
 }
-.collection-item.avatar .title {
+
+.tableHeader {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.purchaseItem {
+    list-style-type: none;
+}
+/* .collection .collection-item{
+    display: flex;
+} */
+/* .collection-item.avatar .title {
     font-size: 20px;
     font-weight: 500;
     color: #ee6e73;
     display: block;
     margin-bottom: 20px;
     
-}
-.collection .collection-item img{
+} */
+/* .collection .collection-item img{
     width: 150px;
     margin-right: 25px;
-}
+} */
 .item-desc{
     align-self:center;
 }
