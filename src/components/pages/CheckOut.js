@@ -1,5 +1,7 @@
-import React from 'react';
-class CheckOut extends React.Component {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class CheckOut extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -165,11 +167,17 @@ class CheckOut extends React.Component {
                 </label>
             </div>
             <input type="submit" value="Submit" />
-            <p>{console.log(this.state)}</p>
+            <p>{console.log(this.state, this.props)}</p>
           </form>
         );
       }
   }
   
-  
-  export default CheckOut;
+const mapStateToProps = (state)=>{
+    return{
+        items: state.addedItems,
+        //addedItems: state.addedItems
+    }
+}
+
+  export default connect(mapStateToProps)(CheckOut);
