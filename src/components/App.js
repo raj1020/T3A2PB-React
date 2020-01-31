@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-// import CheckOut from './pages/CheckOut';
 import HealthBenefits from './pages/HealthBenefits';
 import OurStory from './pages/OurStory';
 import Products from './pages/Products';
@@ -13,6 +12,8 @@ import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
 import Cart from './pages/Cart';
+import CheckOut from './pages/CheckOut';
+// import CheckOutPage from './pages/CheckOutPage';
 // import Styled from 'styled-components';
 
 
@@ -35,6 +36,7 @@ import Cart from './pages/Cart';
                         <Route exact path = "/products" component = {Products} />
                         <Route exact path = "/retailers" component = {Retailers} />
                         <Route exact path = "/showproduct" component = {ShowProduct} />
+                        <Route exact path = "/checkout" component = {CheckOut} />
                     </Switch>
                     <Footer />
                 </BrowserRouter>

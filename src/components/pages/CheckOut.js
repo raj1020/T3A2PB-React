@@ -14,7 +14,7 @@ class CheckOut extends React.Component {
           suburb: '',
           state: '',
           postcode: '',
-          billingAddress: true
+            
         };
     
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -165,6 +165,7 @@ class CheckOut extends React.Component {
                 </label>
             </div>
             <input type="submit" value="Submit" />
+            <p>{console.log(this.state)}</p>
           </form>
         );
       }

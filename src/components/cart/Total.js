@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from "react-router-dom";
+
 import '../../styles/cart.css';
 
 class Total extends Component{
@@ -32,7 +34,9 @@ class Total extends Component{
                         <li className="collection-item"><b>Total: {this.props.total} $</b></li>
                     </div>
                     <div className="checkout">
-                        <button className="waves-effect waves-light btn">Checkout</button>
+                        <Link to="/checkout">
+                            <button className="waves-effect waves-light btn">Checkout</button>
+                        </Link>
                     </div>
                  </div>
         )
