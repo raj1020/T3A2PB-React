@@ -57,7 +57,7 @@ class Cart extends Component{
             ):
 
              (
-                <p>Nothing in cart</p>
+                <p className="cartEmpty">Nothing in cart</p>
              )
        return(
             <div>
@@ -80,8 +80,8 @@ class Cart extends Component{
                         </ul>
                     </div> 
                     <Total />        
-                    <Link to="/checkout" addedItemsTest={this.props.items}>
-                            <button className="waves-effect waves-light btn">Checkout</button>
+                    <Link to="/checkout" addedItems={this.props.items}>
+                            <button className="paymentButton">Continue to Checkout</button>
                     </Link>  
                 </div>
             </div>
