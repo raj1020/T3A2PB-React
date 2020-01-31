@@ -66,7 +66,10 @@ class Cart extends Component{
                             {addedItems}
                         </ul>
                     </div> 
-                    <Total />          
+                    <Total />        
+                    <Link to="/checkout" addedItemsTest={this.props.items}>
+                            <button className="waves-effect waves-light btn">Checkout</button>
+                    </Link>  
                 </div>
             </div>
        )

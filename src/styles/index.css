@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.formHeading {
+  font-weight: bold;
+}
+
 .inputBox {
   width: 320px;
 }

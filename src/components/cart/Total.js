@@ -34,9 +34,6 @@ class Total extends Component{
                         <li className="collection-item"><b>Total: {this.props.total} $</b></li>
                     </div>
                     <div className="checkout">
-                        <Link to="/checkout">
-                            <button className="waves-effect waves-light btn">Checkout</button>
-                        </Link>
                     </div>
                  </div>
         )
