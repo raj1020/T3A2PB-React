@@ -12,6 +12,7 @@ import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
 import Cart from './pages/Cart';
+import CartPage from './pages/CartPage';
 import CheckOut from './pages/CheckOut';
 // import CheckOutPage from './pages/CheckOutPage';
 // import Styled from 'styled-components';
@@ -30,7 +31,7 @@ import CheckOut from './pages/CheckOut';
                     <Switch>
                         <Route exact path = "/" component = {Home} />
                         <Route exact path = "/contact" component = {Contact} />
-                        <Route exact path = "/cart" component = {Cart} />
+                        <Route exact path = "/cart" component = {CartPage} />
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />

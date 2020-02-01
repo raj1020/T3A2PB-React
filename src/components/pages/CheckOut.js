@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
+import Cart from './Cart';
 import './../../styles/index.css';
 
 
@@ -172,11 +173,11 @@ class CheckOut extends Component {
                             checked={this.state.billingaddress}
                             onChange={this.handleInputChange} />
                     </Form.Group>
-                    <Form.Control className="inputBox" type="submit" value="Submit" />
+                    <Form.Control className="inputBox" type="submit" value="Continue to Payment" />
                     <p>{console.log(this.state, this.props)}</p>
             </Form>
             <div>
-
+                <Cart />
             </div>
           </div>
         );

@@ -9,6 +9,10 @@ import '../../styles/cart.css';
 
 class Cart extends Component{
 
+    // componentDidMount() {
+    //     console.log(this.props.addedItems);
+    // }
+
     //to remove the item completely
     handleRemove = (_id)=>{
         this.props.removeItem(_id);
