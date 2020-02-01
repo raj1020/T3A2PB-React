@@ -65,10 +65,10 @@ class Cart extends Component{
              )
        return(
             <div>
-                <h1 className="TextTitle">Shopping Cart</h1>
+                {/* <h1 className="TextTitle">Shopping Cart</h1> */}
                 <div className="cartContainer">
                     <div className="cart">
-                        <h5 className="subTitle">Your order:</h5>
+                        {/* <h5 className="subTitle">Your order:</h5> */}
                         <Table className="tableHeader" striped bordered hover>
                                 <thead>
                                     <tr>
@@ -84,9 +84,9 @@ class Cart extends Component{
                         </ul>
                     </div> 
                     <Total />        
-                    <Link to="/checkout" addedItems={this.props.items}>
+                    {/* <Link to="/checkout" addedItems={this.props.items}>
                             <button className="paymentButton">Continue to Checkout</button>
-                    </Link>  
+                    </Link>   */}
                 </div>
             </div>
        )

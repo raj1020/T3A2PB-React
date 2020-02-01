@@ -4,11 +4,15 @@
 }
 
 .cartContainer {
-    min-height: 60vh;
+    /* min-height: 60vh; */
     margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+}
+
+.CartPageContainer {
+    min-height: 90vh;
 }
 
 .cartEmpty {
@@ -79,7 +83,10 @@
 .paymentButton {
     display: block;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .purchaseItem {

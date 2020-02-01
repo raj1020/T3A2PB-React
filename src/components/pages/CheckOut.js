@@ -41,8 +41,9 @@ class CheckOut extends Component {
     
       render() {
         return (
+        <div>
           <div className="formContainer">
-            <Form>
+            <Form className="checkoutForm">
                 <Form.Group>
                     <Form.Label className="formHeading">
                     Contact Details:
@@ -173,12 +174,15 @@ class CheckOut extends Component {
                             checked={this.state.billingaddress}
                             onChange={this.handleInputChange} />
                     </Form.Group>
-                    <Form.Control className="inputBox" type="submit" value="Continue to Payment" />
-                    <p>{console.log(this.state, this.props)}</p>
+                    {/* <Form.Control className="inputBox" type="submit" value="Continue to Payment" /> */}
             </Form>
-            <div>
-                <Cart />
-            </div>
+          </div>
+          <div className="orderContainer">
+            <Cart />
+            <Form>
+                <Form.Control className="paymentButton" type="submit" value="Continue to Payment" />
+            </Form>
+          </div>
           </div>
         );
       }

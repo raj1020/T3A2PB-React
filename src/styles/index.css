@@ -13,12 +13,28 @@
   justify-content: center;
 }
 
+.checkoutForm {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  padding: 0;
+}
+
 .formHeading {
   font-weight: bold;
 }
 
 .inputBox {
   width: 320px;
+}
+
+.orderContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  padding: 0;
 }
 
 /* Contact page */
