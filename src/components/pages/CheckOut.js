@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import './../../styles/index.css';
+// import BillingAddress from './BillingAddress';
 
 
 class CheckOut extends Component {
@@ -22,7 +23,8 @@ class CheckOut extends Component {
           bilingTwo: '',
           billingSuburb:'',
           billingState: '',
-          billingPostcode: ''
+          billingPostcode: '',
+          billingAddress: true
         };
     
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -58,7 +60,7 @@ class CheckOut extends Component {
                                 className="inputBox"
                                 name="firstName"
                                 type="text"
-                                value={this.state.firstname}
+                                value={this.state.firstName}
                                 onChange={this.handleInputChange} />
                         </Form.Label>
                     </Form.Group>
@@ -80,7 +82,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="email"
                             type="email"
-                            value={this.state.lastname}
+                            value={this.state.email}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -91,7 +93,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="confirmEmail"
                             type="email"
-                            value={this.state.lastname}
+                            value={this.state.confirmEmail}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -102,7 +104,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="phone"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.phone}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -118,7 +120,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="addressOne"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.addressOne}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -129,7 +131,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="addressTwo"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.addressOne}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -140,7 +142,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="suburb"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.suburb}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -151,7 +153,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="state"
                             type="text"
-                            value={this.state.lastname}
+                            value={this.state.state}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -162,7 +164,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="postcode"
                             type="number"
-                            value={this.state.lastname}
+                            value={this.state.postcode}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -173,9 +175,11 @@ class CheckOut extends Component {
                             name="billingAddress"
                             type="checkbox"
                             label="My billing address is different to my delivery address"
-                            checked={this.state.billingaddress}
+                            checked={this.state.billingAddress}
                             onChange={this.handleInputChange} />
                     </Form.Group>
+
+                    {/* {this.state.billingAddress && <BillingAddress/> } */}
                     <Form.Control className="inputBox" type="submit" value="Submit" />
                     <p>{console.log(this.state, this.props)}</p>
             </Form>
