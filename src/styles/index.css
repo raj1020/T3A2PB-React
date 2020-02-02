@@ -5,6 +5,15 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Confirmation page*/
+.textContainer {
+  margin-top: 10vh;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 20px;
+}
+
 /* Checkout form */
 .formContainer {
   min-height: 70vh;
@@ -25,15 +34,13 @@
   font-weight: bold;
 }
 
-.inputBox {
-  width: 320px;
-}
-
 .orderContainer {
   display: block;
+  min-height: 55vh;
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
+  
+  /* width: 400px; */
   padding: 0;
 }
 

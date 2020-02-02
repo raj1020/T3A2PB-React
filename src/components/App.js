@@ -5,13 +5,13 @@ import Home from './pages/Home';
 import HealthBenefits from './pages/HealthBenefits';
 import OurStory from './pages/OurStory';
 import Products from './pages/Products';
-// import Retailers from './pages/Retailers';
+import Confirmation from './pages/Confirmation';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
-import Cart from './pages/Cart';
+// import Cart from './pages/Cart';
 import CartPage from './pages/CartPage';
 import CheckOut from './pages/CheckOut';
 // import CheckOutPage from './pages/CheckOutPage';
@@ -35,7 +35,7 @@ import CheckOut from './pages/CheckOut';
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />
-                        {/* <Route exact path = "/retailers" component = {Retailers} /> */}
+                        <Route exact path = "/confirmation" component = {Confirmation} />
                         <Route exact path = "/products/:id" component = {ShowProduct} />
                         <Route exact path = "/checkout" component = {CheckOut} />
                         <Route component={Home} />
