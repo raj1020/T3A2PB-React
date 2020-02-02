@@ -1,14 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import image from './../../images/background1.jpg';
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
+// import Header from './../header/Header';
 
-const Heading = styled.section`
+const Container = styled.section`
     text-align: center;
+    padding: 10vh;
+    background-image: url(${image});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 72px;
+    font-family: 'Geometria-Medium', sans-serif;
 `;
 
-const subHeading = styled.section`
-    text-align: center;
+const HomeTitle = styled.section`
+    padding: 80px 0px 0px 0px;
+    font-size: 36px;
 `;
 
+const SubTitle = styled.section`
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 24px;
+`;
+
+const HomeText = styled.section`
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 15px;
+    padding: 40px 0px
+`;
 
 class Home extends React.Component {
 
@@ -16,12 +40,15 @@ class Home extends React.Component {
     render () {
         return (
             <>
-            <Heading>
-                <h1>Oakbrook</h1>
-            </Heading>
-            <subHeading>
-                <h2>All Australian, organically managed olive grove and trufferie - Yass Valley, New South Wales.</h2>
-            </subHeading>
+            {/* <Header /> */}
+            <Container>
+                <div>
+                    <HomeTitle>OAKBROOK</HomeTitle>
+                    <SubTitle>Yass Valley</SubTitle>
+                    <HomeText>All Australian, organically managed olive grove and trufferie.</HomeText>
+                    <Link to="/products"><Button variant="primary">SHOP</Button></Link>
+                </div>
+            </Container>
             </>
         );
     }
