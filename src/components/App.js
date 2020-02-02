@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import HealthBenefits from './pages/HealthBenefits';
 import OurStory from './pages/OurStory';
 import Products from './pages/Products';
-import Retailers from './pages/Retailers';
+// import Retailers from './pages/Retailers';
 import ShowProduct from './pages/ShowProduct';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
@@ -35,9 +35,10 @@ import CheckOut from './pages/CheckOut';
                         <Route exact path = "/healthbenefits" component = {HealthBenefits} />
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />
-                        <Route exact path = "/retailers" component = {Retailers} />
+                        {/* <Route exact path = "/retailers" component = {Retailers} /> */}
                         <Route exact path = "/products/:id" component = {ShowProduct} />
                         <Route exact path = "/checkout" component = {CheckOut} />
+                        <Route component={Home} />
                     </Switch>
                     <Footer />
                 </BrowserRouter>
