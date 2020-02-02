@@ -140,9 +140,10 @@
 .Container1 {
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   min-height: 60vh;
+  margin-top: 20px;
   /* margin-left: 20px;
   margin-right: 20px; */
 }

@@ -17,6 +17,7 @@
 .productContainer {
     min-height: 60vh;
     margin-top: 30px;
+    flex-flow: row wrap;
 }
 
 .cartContainer {

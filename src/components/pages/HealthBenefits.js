@@ -14,7 +14,7 @@ class HealthBenefits extends React.Component {
                 <div className="Container1">
                     <Card className="LimitWidth">
                             <Card.Img alt="green olives on tree" variant="top" src={olives2} />
-                            <Card.Title className="CardTitle">Good quality olive oil has significant health benefits and tastes better.</Card.Title>
+                            <Card.Title className="CardTitle">Good quality olive oil has significant health benefits and tastes better</Card.Title>
                             <Card.Body>
                             <Card.Text>
                                 <p>Just as bad fat can have a negative effect, good fat can work wonders. Those who are prepared to spend a little extra on cold-pressed (extra virgin) olive oil will be dunking their baguette in a soothing balm for their heart and blood vessels. Many studies have been carried out into the effects of olive oil, and results show that it can protect against arteriosclerosis, cellular stress, Alzheimer’s, and eye disease (such as macular degeneration). It also appears to have beneficial effects on inflammatory diseases such as rheumatic arthritis, and to help in protecting against certain kinds of cancer.
