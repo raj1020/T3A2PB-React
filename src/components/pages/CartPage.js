@@ -82,8 +82,14 @@ class CartPage extends Component{
                     </div> 
                     <Total />        
                     <Link to="/checkout" addedItems={this.props.items}>
-                            <button className="paymentButton">Continue to Checkout</button>
+                        <button className="paymentButton">Continue to Checkout</button>
                     </Link>  
+                    <div className="shippingPolicy">
+                        <h5 className="shippingTitle">Shipping Policy</h5>
+                        <p>We offer FLAT RATE SHIPPING within Australia.</p>
+                        <p>$14.95</p>
+                        <p>All orders are calculated in Australian Dollars. Once orders are received they will be dispatched within 2 business days and are delivered direct to your door within 1 – 10 working days depending on your location.</p>
+                    </div>
                 </div>
             </div>
        )

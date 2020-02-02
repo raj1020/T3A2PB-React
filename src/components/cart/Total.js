@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 import '../../styles/cart.css';
 
 class Total extends Component{
     
+    // componentDidMount() {
+    //     if(this.props.total) {
+    //         this.props.addShipping();
+    //     }
+    // }
+
     // componentWillUnmount() {
     //      if(this.refs.shipping.checked)
     //           this.props.subtractShipping()
-    // }
-
-    // handleChecked = (e)=>{
-    //     if(e.target.checked){
-    //         this.props.addShipping();
-    //     }
-    //     else{
-    //         this.props.subtractShipping();
-    //     }
     // }
 
     render(){
@@ -28,7 +25,7 @@ class Total extends Component{
             <thead>
                 <tr>
                 <th colSpan="3">Shipping</th>
-                <th>$10.00</th>
+                <th>$14.95</th>
                 </tr>
             </thead>
             </Table>
@@ -36,7 +33,7 @@ class Total extends Component{
             <thead>
                 <tr>
                 <th colSpan="3">TOTAL</th>
-                <th>${this.props.total}.00</th>
+                <th>${this.props.total}</th>
                 </tr>
             </thead>
             </Table>

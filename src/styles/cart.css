@@ -1,10 +1,30 @@
+/* Cart page*/
+.shippingPolicy {
+    display: block;
+    background-color: rgb(230, 224, 224);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.shippingTitle {
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .productContainer {
     min-height: 60vh;
     margin-top: 30px;
 }
 
 .cartContainer {
-    min-height: 60vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    min-height: 65vh;
     margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
