@@ -66,6 +66,14 @@
     font-weight: bold;
 }
 
+.rowWidth {
+    width: 120px;
+}
+
+.row1Width {
+    width: 40px;
+}
+
 .ProductCard{
     padding: 20px;
     margin: 20px;

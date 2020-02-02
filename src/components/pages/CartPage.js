@@ -22,6 +22,12 @@ class CartPage extends Component{
     handleSubtractQuantity = (_id)=>{
         this.props.subtractQuantity(_id);
     }
+
+    // toCurrency = (num) => {
+    //     // return Math.round(num * 100)/100;
+    //     return parseFloat(num.toFixed(2))
+    // }
+
     render(){
               
         let addedItems = this.props.items.length ?
@@ -69,10 +75,10 @@ class CartPage extends Component{
                         <Table className="tableHeader" striped bordered hover>
                                 <thead>
                                     <tr>
-                                    <th colSpan="2">Quantity</th>
+                                    <th className="row1Width" colSpan="2">Quantity</th>
                                     <th>Product</th>
                                     <th>Price</th>
-                                    <th></th>
+                                    <th className="rowWidth"></th>
                                     </tr>
                                 </thead>
                         </Table>
@@ -81,7 +87,7 @@ class CartPage extends Component{
                         </ul>
                     </div> 
                     <Total />        
-                    <Link to="/checkout" addedItems={this.props.items}>
+                    <Link to="/checkout">
                         <button className="paymentButton">Continue to Checkout</button>
                     </Link>  
                     <div className="shippingPolicy">

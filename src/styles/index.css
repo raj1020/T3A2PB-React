@@ -314,14 +314,17 @@
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
+    border: none;
   }
   
   /* Individual item */
   .bm-item {
     display: inline-block;
+    border: none;
   }
   
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+    border: none;
   }
