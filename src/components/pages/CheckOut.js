@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Cart from './Cart';
+import Checkout from './../stripe/checkout';
 import './../../styles/index.css';
 
 
@@ -26,7 +27,7 @@ class CheckOut extends Component {
       }
 
       componentDidMount() {
-          console.log(this.props.items);
+          console.log(this.props, this.state);
       }
     
       handleInputChange(event) {
@@ -179,9 +180,10 @@ class CheckOut extends Component {
           </div>
           <div className="orderContainer">
             <Cart />
-            <Form>
+            {/* <Form>
                 <Form.Control className="paymentButton" type="submit" value="Continue to Payment" />
-            </Form>
+            </Form> */}
+            <Checkout />
           </div>
           </div>
         );
