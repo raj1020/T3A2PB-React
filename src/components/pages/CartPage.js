@@ -6,24 +6,69 @@ import Table from 'react-bootstrap/Table';
 import Total from '../cart/Total';
 import { removeItem,addQuantity,subtractQuantity} from '../../actions/cartActions';
 import '../../styles/cart.css';
+import StripeCheckout from 'react-stripe-checkout'
+import Api from '../../api/api'
 
 
 class CartPage extends Component{
+    state = {
+        product: {
+            name: '',
+            price: ''
+        }
+    }
+
+    setProduct=()=>{
+        const {total, items}=this.props
+        const name = (items.map((item)=>{
+            return `${item.quantity} x ${item.size} ${item.name} ($${item.quantity*item.price})`
+        })).join(' , ')
+        this.setState({product:{name:name, price:total}})
+    }
+
+    componentDidMount=()=>{
+        this.setProduct();
+        const {product}=this.state;
+        console.log(product)
+    }
+
+    componentDidUpdate=()=>{
+        const {product}=this.state;
+        console.log(product)
+    }
 
     //to remove the item completely
     handleRemove = (_id)=>{
         this.props.removeItem(_id);
+        this.setProduct();
     }
     //to add the quantity
     handleAddQuantity = (_id)=>{
         this.props.addQuantity(_id);
+        this.setProduct();
     }
     //to substruct from the quantity
     handleSubtractQuantity = (_id)=>{
         this.props.subtractQuantity(_id);
+        this.setProduct();
     }
+
+    handleToken = async(token) => {
+        const {product} = this.state
+        const response = await Api.post('/orders', {
+            token,
+            product
+        });
+        const { status } = response.data
+        if (status === 'success'){
+            console.log('Success')
+        } else {
+            console.log('Fail')
+        }
+    }
+
     render(){
-              
+        const {total} = this.props
         let addedItems = this.props.items.length ?
             (  
                 this.props.items.map(item=>{
@@ -80,10 +125,21 @@ class CartPage extends Component{
                             {addedItems}
                         </ul>
                     </div> 
-                    <Total />        
-                    <Link to="/checkout" addedItems={this.props.items}>
-                        <button className="paymentButton">Continue to Checkout</button>
-                    </Link>  
+                    <Total /> 
+                    <br/>       
+                    <div>
+                        <StripeCheckout
+                        label='Continue to Checkout'
+                        className='paymentButton'
+                        stripeKey='pk_test_ymw4NkCgqTmepxPMXwR1S7mc00ohOZj6l4'
+                        token={this.handleToken}
+                        billingAddress
+                        shippingAddress
+                        amount={total*100}
+                        name='Oakbrook'
+                        />
+                    </div>
+               
                     <div className="shippingPolicy">
                         <h5 className="shippingTitle">Shipping Policy</h5>
                         <p>We offer FLAT RATE SHIPPING within Australia.</p>
@@ -100,6 +156,7 @@ class CartPage extends Component{
 const mapStateToProps = (state)=>{
     return{
         items: state.addedItems,
+        total: state.total
         //addedItems: state.addedItems
     }
 }
