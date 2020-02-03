@@ -17,7 +17,7 @@ class NavBar extends React.Component {
         <Link to="/products" id="products" className="menu-item">Products</Link>
         <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         <Link to="/healthbenefits" id="healthbenefits" className="menu-item">Health Benefits</Link>
-        <Link to="/retailers" id="retailers" className="menu-item">Retailers</Link>
+        {/* <Link to="/retailers" id="retailers" className="menu-item">Retailers</Link> */}
         <Link to="/cart" id="cart" className="menu-item">Shopping Cart</Link>
       </Menu>
     );
