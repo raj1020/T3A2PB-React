@@ -78,6 +78,11 @@
   padding-top: 5px;
 }
 
+/* Our Story Page */
+.inputText {
+  padding-bottom: 8px;
+}
+
 /* Retailers page */
 .subTitle {
     font-family: 'Geometria-Medium', sans-serif;
