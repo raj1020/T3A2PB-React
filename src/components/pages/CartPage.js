@@ -40,6 +40,7 @@ class CartPage extends Component{
     //to remove the item completely
     handleRemove = (_id)=>{
         this.props.removeItem(_id);
+        this.props.subtractShipping();
         this.setProduct();
     }
     //to add the quantity
@@ -61,7 +62,8 @@ class CartPage extends Component{
         });
         const { status } = response.data
         if (status === 'success'){
-            console.log('Success')
+            console.log(this.props);
+            
         } else {
             console.log('Fail')
         }
@@ -133,6 +135,8 @@ class CartPage extends Component{
                         className='paymentButton'
                         stripeKey='pk_test_ymw4NkCgqTmepxPMXwR1S7mc00ohOZj6l4'
                         token={this.handleToken}
+                        currency='AUD'
+                        allowRememberMe={false}
                         billingAddress
                         shippingAddress
                         amount={total*100}
@@ -143,7 +147,7 @@ class CartPage extends Component{
                     <div className="shippingPolicy">
                         <h5 className="shippingTitle">Shipping Policy</h5>
                         <p>We offer FLAT RATE SHIPPING within Australia.</p>
-                        <p>$14.95</p>
+                        <p>$15.00</p>
                         <p>All orders are calculated in Australian Dollars. Once orders are received they will be dispatched within 2 business days and are delivered direct to your door within 1 – 10 working days depending on your location.</p>
                     </div>
                 </div>
@@ -164,6 +168,8 @@ const mapDispatchToProps = (dispatch)=>{
     return{
         removeItem: (_id)=>{dispatch(removeItem(_id))},
         addQuantity: (_id)=>{dispatch(addQuantity(_id))},
+        addShipping: ()=>{dispatch({type: 'ADD_SHIPPING'})},
+        subtractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})},
         subtractQuantity: (_id)=>{dispatch(subtractQuantity(_id))}
     }
 }
