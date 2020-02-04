@@ -7,6 +7,10 @@ import '../../styles/cart.css';
 
 
  class Products extends Component{
+
+    componentDidMount() {
+        console.log(this.state)
+    }
     
     handleClick = (_id)=>{
         this.props.addToCart(_id); 
@@ -16,7 +20,7 @@ import '../../styles/cart.css';
         let itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
-                <Link to="/"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
+                <Link to="/"><Card.Img variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/upload/${item.image}`} alt={item.name}/></Link>
                 <Card.Body>
                     <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
                     <div className="sizePrice">
