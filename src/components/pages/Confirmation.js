@@ -12,7 +12,7 @@ class Confirmation extends Component {
         <div>
         <h1 className="TextTitle">Order Confirmation</h1>
             <div className="orderContainer">
-                <div className="textContainer"x>
+                <div className="textContainer">
                     <p className="confirmationText">Thank you for your purchase.</p>
                     <p className="confirmationText">An invoice has been sent to your email.</p>
                     <p className="confirmationText">We will send you an email when your order has been shipped.</p>

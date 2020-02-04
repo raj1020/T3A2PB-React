@@ -63,9 +63,10 @@ class CartPage extends Component{
         const { status } = response.data
         if (status === 'success'){
             console.log(this.props);
+            this.props.history.push('/confirmation');
             
         } else {
-            console.log('Fail')
+            console.log('Fail');
         }
     }
 
