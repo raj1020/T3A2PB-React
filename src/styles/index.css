@@ -78,17 +78,24 @@
   padding-top: 5px;
 }
 
-/* Our Story Page */
-.inputText {
-  padding-bottom: 8px;
+.contactCardTitle {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
+
+/* Our Story Page */
+/* .inputText {
+  padding-bottom: 12px;
+} */
 
 /* Retailers page */
 .subTitle {
+    display: block;
     font-family: 'Geometria-Medium', sans-serif;
     font-size: 20px;
     padding: 20px 16px;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
 }
 
