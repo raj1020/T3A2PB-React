@@ -5,6 +5,32 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Homepage */
+/* .imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+.imageDims {
+  background-color: red;
+  /* max-width: 400px; */
+  /* max-height: 400px; */
+
+.subTitle2 {
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 35% 10%;
+}
+
+.subTitle3 {
+  color: white;
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 35% 10%;
+}
+
 /* Confirmation page*/
 .textContainer {
   margin-top: 10vh;
