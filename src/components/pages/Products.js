@@ -41,7 +41,7 @@ const ShowProduct = ({ match, location }) => {
                 <Card className="ProductCard" key={item._id}>
                     
                 
-                <Link to={`/product/${item._id}`}>Product Details   </Link>
+                <Link to={`/product/${item._id}`}>  
                
                 <Card.Img variant="top" src={item.img} alt={item.name}/>
                 <Card.Body>
@@ -63,6 +63,7 @@ const ShowProduct = ({ match, location }) => {
                     </div>
                     
                 </Card.Body>
+                </Link>
                 </Card>
 
 
