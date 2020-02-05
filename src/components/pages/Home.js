@@ -74,7 +74,7 @@ const SubTitle = styled.section`
 
 const HomeText = styled.section`
     font-family: 'Geometria-Medium', sans-serif;
-    font-size: 15px;
+    font-size: 24px;
     padding: 40px 0px
 `;
 
