@@ -12,29 +12,19 @@ import Api from '../../api/api'
 
 class CartPage extends Component{
     state = {
-        product: {
-            name: '',
-            price: ''
-        }
+        description: ''
     }
 
     setProduct=()=>{
-        const {total, items=[]}=this.props
-        const name = (items.map((item)=>{
+        const {items=[]}=this.props
+        const description = (items.map((item)=>{
             return `${item.quantity} x ${item.size} ${item.name} ($${item.quantity*item.price})`
         })).join(' , ')
-        this.setState({product:{name:name, price:total}})
+        this.setState({description})
     }
 
     componentDidMount=()=>{
         this.setProduct();
-        const {product}=this.state;
-        console.log(product)
-    }
-
-    componentDidUpdate=()=>{
-        const {product}=this.state;
-        console.log(product)
     }
 
     //to remove the item completely
@@ -55,10 +45,13 @@ class CartPage extends Component{
     }
 
     handleToken = async(token) => {
-        const {product} = this.state
+        const tokenId = token.id;
+        const {total} = this.props;
+        const {description} = this.state;
         const response = await Api.post('/orders', {
-            token,
-            product
+            tokenId,
+            total,
+            description
         });
         const { status } = response.data
         if (status === 'success'){
@@ -137,7 +130,7 @@ class CartPage extends Component{
                             <StripeCheckout
                             label='Continue to Checkout'
                             className='paymentButton'
-                            stripeKey='pk_test_ymw4NkCgqTmepxPMXwR1S7mc00ohOZj6l4'
+                            stripeKey={process.env.REACT_APP_STRIPE_KEY}
                             token={this.handleToken}
                             currency='AUD'
                             allowRememberMe={false}

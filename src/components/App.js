@@ -36,7 +36,7 @@ import CheckOut from './pages/CheckOut';
                         <Route exact path = "/ourstory" component = {OurStory} />
                         <Route exact path = "/products" component = {Products} />
                         <Route exact path = "/confirmation" component = {Confirmation} />
-                        <Route exact path = "/products/:id" component = {ShowProduct} />
+                        <Route exact path = "/product/:id" component = {ShowProduct} />
                         <Route exact path = "/checkout" component = {CheckOut} />
                         <Route component={Home} />
                     </Switch>
