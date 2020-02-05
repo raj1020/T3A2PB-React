@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import '../../styles/cart.css';
 import {BrowserRouter,Route,Router,Switch} from 'react-router-dom';
-// import ShowProduct from './ShowProduct';
+
 
 
 const ShowProduct = ({ match, location }) => {
@@ -15,29 +15,34 @@ const ShowProduct = ({ match, location }) => {
           <strong>Match Props: </strong>
           <code>{JSON.stringify(match, null, 2)}</code>
         </p>
-        <p>
-          <strong>Location Props: </strong>
-          <code>{JSON.stringify(location, null, 2)}</code>
-        </p>
+      
+        
       </>
     );
   };
 
 
  class Products extends Component{
+   
+
+
+
     
     handleClick = (_id)=>{
         this.props.addToCart(_id); 
+        
     }
 
     render(){
+
+       
         let itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
-                    <BrowserRouter>
-                <Route exact path="/ShowProduct/:${item._id}" component={ShowProduct} />
-                <Link to="/ShowProduct/:${item._id}">Product Details</Link>
-                </BrowserRouter>
+                    
+                
+                <Link to={`/product/${item._id}`}>Product Details   </Link>
+               
                 <Card.Img variant="top" src={item.img} alt={item.name}/>
                 <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
@@ -56,8 +61,11 @@ const ShowProduct = ({ match, location }) => {
                     >
                         <div>+ Add to Cart</div>
                     </div>
+                    
                 </Card.Body>
                 </Card>
+
+
 
             )
         })

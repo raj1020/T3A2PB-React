@@ -13,8 +13,9 @@ import Footer from './header/Footer';
 import Header from './header/Header';
 import Cart from './pages/Cart';
 import CheckOut from './pages/CheckOut';
-// import CheckOutPage from './pages/CheckOutPage';
+import Stripe from './pages/Stripe';
 // import Styled from 'styled-components';
+import {render} from 'react-dom';
 
 
  class App extends React.Component {
@@ -22,25 +23,28 @@ import CheckOut from './pages/CheckOut';
 
     render () {
         return (
-            <React.Fragment>
-                <CssBaseline />
-                <BrowserRouter> 
-                <Header />
-                <NavBar />
-                    <Switch>
-                        <Route exact path = "/" component = {Home} />
-                        <Route exact path = "/contact" component = {Contact} />
-                        <Route exact path = "/cart" component = {Cart} />
-                        <Route exact path = "/healthbenefits" component = {HealthBenefits} />
-                        <Route exact path = "/ourstory" component = {OurStory} />
-                        <Route exact path = "/products" component = {Products} />
-                        <Route exact path = "/retailers" component = {Retailers} />
-                        <Route exact path = "/products/:id" component = {ShowProduct} />
-                        <Route exact path = "/checkout" component = {CheckOut} />
-                    </Switch>
-                    <Footer />
-                </BrowserRouter>
-            </React.Fragment>
+            <>
+                <React.Fragment>
+                    <CssBaseline />
+                    <BrowserRouter> 
+                    <Header />
+                    <NavBar />
+                        <Switch>
+                            <Route exact path = "/" component = {Home} />
+                            <Route exact path = "/contact" component = {Contact} />
+                            <Route exact path = "/cart" component = {Cart} />
+                            <Route exact path = "/healthbenefits" component = {HealthBenefits} />
+                            <Route exact path = "/ourstory" component = {OurStory} />
+                            <Route exact path = "/products" component = {Products} />
+                            <Route exact path = "/retailers" component = {Retailers} />
+                            <Route exact path = "/product/:id" component = {ShowProduct} />
+                            <Route exact path = "/checkout" component = {CheckOut} />
+                            <Route exact path = "/stripe" component = {Stripe} />
+                        </Switch>
+                        <Footer />
+                    </BrowserRouter>
+                </React.Fragment>
+            </>
             
         )
     }

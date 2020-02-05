@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import './../../styles/index.css';
 // import BillingAddress from './BillingAddress';
+import {Redirect} from 'react-router-dom';
+//import {Elements} from 'react-stripe-elements';
+
+//import InjectedCheckoutForm from './CheckOut';
+
+
 
 
 class CheckOut extends Component {
@@ -43,9 +49,17 @@ class CheckOut extends Component {
           [name]: value
         });
       }
+
+
+      onSubmit = () => {
+        
+              this.props.history.push('/stripe/');
+        }
     
       render() {
         return (
+
+            <>
           <div className="formContainer">
             <Form>
                 <Form.Group>
@@ -131,7 +145,7 @@ class CheckOut extends Component {
                             className="inputBox"
                             name="addressTwo"
                             type="text"
-                            value={this.state.addressOne}
+                            value={this.state.addressTwo}
                             onChange={this.handleInputChange} />
                     </Form.Label>
                 </Form.Group>
@@ -180,13 +194,17 @@ class CheckOut extends Component {
                     </Form.Group>
 
                     {/* {this.state.billingAddress && <BillingAddress/> } */}
-                    <Form.Control className="inputBox" type="submit" value="Submit" />
+                    <Form.Control className="inputBox" onClick={this.onSubmit} type="submit" value="Submit" />
                     <p>{console.log(this.state, this.props)}</p>
             </Form>
             <div>
 
             </div>
           </div>
+          {/* <Elements>
+        <InjectedCheckoutForm />
+      </Elements> */}
+          </>
         );
       }
   }

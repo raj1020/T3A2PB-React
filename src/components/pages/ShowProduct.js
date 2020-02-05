@@ -1,51 +1,91 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from '../../actions/cartActions'
-import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
-import '../../styles/cart.css';
 
+import Card from 'react-bootstrap/Card';
+import '../../styles/index.css';
 
 class ShowProduct extends React.Component {
 
-    componentDidMount() {
-        console.log(this.props);
+   
+   
+
+    getProduct() {
+        const { id } = this.props.match.params;
+        const { items } = this.props;
+
+        return items.find(item => item._id === id);
+    }
+
+    handleClick = (_id) => {
+        this.props.addToCart(_id); 
+        
     }
 
     render () {
-        return (
-            <div>
-                {/* <Card className="ProductCard" key={this.props.items._id}>
-                <Card.Img variant="top" src={this.props.items.img} alt={this.props.items.name}/>
-                
-                   <Card.Title>{this.props.items.name}</Card.Title>
-                    <div className="sizePrice">
-                        <Card.Text>{this.props.items.size}</Card.Text>
-                        <Card.Text>${this.props.items.price}.00</Card.Text>
-                    </div>
-                    <div 
-                        to="/" 
-                        className="addToCart" 
-                        onClick={()=>{
-                            this.handleClick(this.props.items._id)
-                            alert(`${this.props.items.size} ${this.props.items.name} added to cart`)
-                            }
-                        }
-                    >
-                        <div>+ Add to Cart</div>
+        const product = this.getProduct();
+        console.log(product);
+        if (product) {
+            return (
+                <div className = "formContainer">
+    
+               
+
+
+                    <Card className="ProductCard" key={product._id}>
+                        <Card.Img variant="top" src={product.img} alt={product.name}/>
+                        <Card.Body>
+                        <Card.Title>{product.name}</Card.Title>
+                        <div className="sizePrice">
+                            <Card.Text>{product.size}</Card.Text>
+                            <Card.Text>${product.price}.00</Card.Text>
+                            
                         </div>
-                        
-                </Card> */}
-                        {this.props.id}
-                   
+                        <div>
+
+                            <Card.Text>{product.description}</Card.Text>
+                        </div>
+                        <div 
+                            to="/" 
+                            className="addToCart" 
+                            onClick={()=>{
+                                this.handleClick(product._id)
+                                alert(`${product.size} ${product.name} added to cart`)
+                                }
+                            }
+                        >
+                            <div>+ Add to Cart</div>
                     </div>
+                        
+                    </Card.Body>
+                    </Card>
 
+                       
+                        </div>
+    
+    
+    
+                
+            );
+        }
+        
+        return null;
+    }
+}
 
+const mapStateToProps = (state)=>{
+    return {
+      items: state.items
+    }
+  }
 
-            
-        );
+  const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        addToCart: (_id)=>{dispatch(addToCart(_id))}
     }
 }
 
 
-export default ShowProduct;
+
+export default connect(mapStateToProps,mapDispatchToProps)(ShowProduct);
