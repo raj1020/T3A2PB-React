@@ -17,6 +17,7 @@
   * [R6 Project Management](#r6-project-management)
     + [R6.1 Trello](#r61-trello)
     + [R6.2 Jira](#r62-jira)
+    + [R6.2 Source Control](#r63-source-control)
 
 ## R1 - Description
 
@@ -182,7 +183,29 @@ It soon became apparent that simple kanban lists were not adequate to manage the
 
 In Jira, kanban style task backlogs are integrated with planned sprints, which tie into the overall project road map.
 
-The Jira platform will be constantly monitored and updated in response to the changing requirements and priorities of the project by the project manager.
+The Jira platform is be constantly monitored and updated in response to the changing requirements and priorities of the project by the project manager.
 
 ![Jira Kanban task backlog](docs/jira-2020-01-16-B.JPG "Jira Kanban task backlog 16/01")
 *Figure R6.2(b) - Screenshot of Jira task backlog from 16/01/2020.*
+
+### R6.3 Task Delegation
+It quickly became apparent that different team members have different strengths, working styles and preferences for which features they want to work on.
+
+Tasks were generally delegated as follows:
+- Project Management and Client Interaction: Elliot
+- Backend development: Tom
+- Front-end design: Elliot
+- Front-end development: Prad, Elliot
+- Bug fixes: Prad, Tom
+
+While these were the general roles of the team, the team followed an agile methodology which meant these roles were not rigid but only a guide. 
+
+
+### R6.3 Source Control
+
+This project composes of three separate public GitHub repositories:
+- React front-end for user: https://github.com/raj1020/T3A2PB-React
+- React front-end for admin content management: https://github.com/thomasalfonso/T3A2PB-ReactAdmin
+- Express back-end: https://github.com/thomasalfonso/T3A2PB-Express
+
+Seperate branches were utilised by each team member while working on features, which were then merged to master at regular intervals. Commits were made often - after any notable portion of code was edited.
