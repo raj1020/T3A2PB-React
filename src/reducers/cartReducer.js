@@ -1,20 +1,31 @@
-import logoSm from '../images/logoSm.png'
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
+import Api from './../api/api';
 
 
-const initState = {
-        items: [
-        {_id:'1', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 11.00, size: "250mL", count: 10, available: true, img: logoSm },
-        {_id:'2', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 16.00, count: 10, size: "500mL", available: true, img: logoSm },
-        {_id:'3', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 65.00, count: 10, size: "3L", available: true, img: logoSm },
-        {_id:'4', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 230.00, count: 10, size: "20L", available: false, img: logoSm },
-        {_id:'5', name: 'Jar of Black Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm },
-        {_id:'6', name: 'Jar of Green Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm }
-        ],
-        addedItems:[],
-        total: 0
+let initState = {}
 
+async function assignsInit (){
+    const response = await Api.get('/user');
+    initState.items=response.data.products || [""];
+    initState.addedItems=[];
+    initState.total=0
 }
+assignsInit();
+console.log(initState)
+
+// const initState = {
+//         items: [
+//         {_id:'1', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 11.00, size: "250mL", count: 10, available: true, img: logoSm },
+//         {_id:'2', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 16.00, count: 10, size: "500mL", available: true, img: logoSm },
+//         {_id:'3', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 65.00, count: 10, size: "3L", available: true, img: logoSm },
+//         {_id:'4', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 230.00, count: 10, size: "20L", available: false, img: logoSm },
+//         {_id:'5', name: 'Jar of Black Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm },
+//         {_id:'6', name: 'Jar of Green Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm }
+//         ],
+//         addedItems:[],
+//         total: 0
+
+// }
 
 const cartReducer= (state = initState,action)=>{
    
@@ -95,14 +106,14 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 14.95
+              total: state.total + 15
           }
     }
 
     if(action.type=== 'SUB_SHIPPING'){
         return{
             ...state,
-            total: state.total - 14.95
+            total: state.total - 15
         }
   }
     

@@ -14,22 +14,22 @@ class Contact extends React.Component {
             <div>
                 <h1 className="TextTitle">Contact Us</h1>
                 <div className="Container0">
-                    <h2 className="subTitle">Get in touch with us!</h2>
+                    {/* <h2 className="subTitle">Get in touch with us!</h2> */}
                     <div className="Container1">
                     <Card className="contactCard">
                         <Card.Body>
-                        <Card.Title>Email:</Card.Title>
+                        <Card.Title className="contactCardTitle">Email:</Card.Title>
                             <Card.Text>
-                                <p className="contactText">oakbrookyassvalley@gmail.com</p>
+                                <span className="contactText">oakbrookyassvalley@gmail.com</span>
                             </Card.Text>
                         </Card.Body>
                     </Card>
                     <Card className="contactCard">
                         <Card.Body>
-                            <Card.Title>Phone:</Card.Title>
+                            <Card.Title className="contactCardTitle">Phone:</Card.Title>
                             <Card.Text>
-                                <p className="contactText">Rick Martin 0417 229 810</p>
-                                <p className="contactText">Fiona Martin 0408 409 558</p>
+                                <span className="contactText">Rick Martin 0417 229 810</span><br /><br />
+                                <span className="contactText">Fiona Martin 0408 409 558</span>
                             </Card.Text>
                         </Card.Body>
                     </Card>

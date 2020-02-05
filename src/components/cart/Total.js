@@ -6,16 +6,16 @@ import '../../styles/cart.css';
 
 class Total extends Component{
     
-    // componentDidMount() {
-    //     if(this.props.total) {
-    //         this.props.addShipping();
-    //     }
-    // }
+    componentDidMount() {
+        if(this.props.total) {
+            this.props.addShipping();
+        }
+    }
 
-    // componentWillUnmount() {
-    //      if(this.refs.shipping.checked)
-    //           this.props.subtractShipping()
-    // }
+    componentWillUnmount() {
+         if(this.props.total)
+              this.props.subtractShipping()
+    }
 
     render(){
   
@@ -25,7 +25,7 @@ class Total extends Component{
             <thead>
                 <tr>
                 <th colSpan="3">Shipping</th>
-                <th>$14.95</th>
+                <th className="rowWidth">$15.00</th>
                 </tr>
             </thead>
             </Table>
@@ -33,7 +33,7 @@ class Total extends Component{
             <thead>
                 <tr>
                 <th colSpan="3">TOTAL</th>
-                <th>${this.props.total}</th>
+                <th className="rowWidth">${this.props.total}.00</th>
                 </tr>
             </thead>
             </Table>

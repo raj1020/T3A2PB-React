@@ -7,18 +7,30 @@ import '../../styles/cart.css';
 
 
  class Products extends Component{
+
+    componentDidMount() {
+        console.log(this.state)
+    }
     
     handleClick = (_id)=>{
         this.props.addToCart(_id); 
     }
 
     render(){
-        let itemList = this.props.items.map(item=>{
+        console.log(this.props.items);
+        // if (this.props.items === [] || undefined || null) {
+        //     return (
+        //         <dvi>Something went wrong</dvi>
+        //     );
+        // } 
+        let itemList;
+        try {
+        itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
-                <Link to="/"><Card.Img variant="top" src={item.img} alt={item.name}/></Link>
+                <Link className="imageContainer" to={`/product/${item._id}`}><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${item.image}`} alt={item.name}/></Link>
                 <Card.Body>
-                    <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
+                    <Link to={`/product/${item._id}`} className="Link"><Card.Title>{item.name}</Card.Title></Link>
                     <div className="sizePrice">
                         <Card.Text>{item.size}</Card.Text>
                         <Card.Text>${item.price}.00</Card.Text>
@@ -39,6 +51,11 @@ import '../../styles/cart.css';
 
             )
         })
+        } catch(err){
+            return(
+                <div className="errorMessage" >Oops, something went wrong!</div>
+            )
+        }
 
         return(
             <div>

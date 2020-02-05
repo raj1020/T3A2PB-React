@@ -5,6 +5,41 @@
   src: local('Geometria-Medium'), url('./fonts/Geometria-Medium.woff') format('woff');
 }
 
+/* Homepage */
+/* .imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+.imageDims {
+  background-color: red;
+  /* max-width: 400px; */
+  /* max-height: 400px; */
+
+.subTitle2 {
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 35% 10%;
+}
+
+.subTitle3 {
+  color: white;
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 24px;
+  padding: 35% 10%;
+}
+
+/* Confirmation page*/
+.textContainer {
+  margin-top: 10vh;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Geometria-Medium', sans-serif;
+  font-size: 20px;
+}
+
 /* Checkout form */
 .formContainer {
   min-height: 70vh;
@@ -25,15 +60,13 @@
   font-weight: bold;
 }
 
-.inputBox {
-  width: 320px;
-}
-
 .orderContainer {
   display: block;
+  min-height: 55vh;
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
+  
+  /* width: 400px; */
   padding: 0;
 }
 
@@ -71,12 +104,24 @@
   padding-top: 5px;
 }
 
+.contactCardTitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Our Story Page */
+/* .inputText {
+  padding-bottom: 12px;
+} */
+
 /* Retailers page */
 .subTitle {
+    display: block;
     font-family: 'Geometria-Medium', sans-serif;
     font-size: 20px;
     padding: 20px 16px;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
 }
 
@@ -133,9 +178,10 @@
 .Container1 {
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   min-height: 60vh;
+  margin-top: 20px;
   /* margin-left: 20px;
   margin-right: 20px; */
 }
@@ -238,11 +284,12 @@
     padding: 10px 1px;
 }
 
-.menu-item:hover, .menu-item:active {
+.menu-item:hover, .menu-item:active, .menu-item:focus {
     color: #CFCC25;
     font-weight: bold;
     text-decoration: none;
     border: none;
+    outline: none;
 
 }
 
@@ -306,14 +353,17 @@
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
+    border: none;
   }
   
   /* Individual item */
   .bm-item {
     display: inline-block;
+    border: none;
   }
   
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+    border: none;
   }
