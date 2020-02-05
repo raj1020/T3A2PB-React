@@ -20,7 +20,7 @@ import '../../styles/cart.css';
         let itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
-                <Link className="imageContainer" to="/"><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/upload/${item.image}`} alt={item.name}/></Link>
+                <Link className="imageContainer" to="/"><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${item.image}`} alt={item.name}/></Link>
                 <Card.Body>
                     <Link to="/" className="Link"><Card.Title>{item.name}</Card.Title></Link>
                     <div className="sizePrice">
