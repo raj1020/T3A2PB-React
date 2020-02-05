@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from '../../actions/cartActions'
-
 import Card from 'react-bootstrap/Card';
 import '../../styles/index.css';
 
@@ -25,7 +24,7 @@ class ShowProduct extends Component {
             return (
                 <div className = "formContainer">
                     <Card className="ProductCard" key={product._id}>
-                        <Card.Img variant="top" src={product.img} alt={product.name}/>
+                        <Card.Img variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${product.image}`} alt={product.name}/>
                         <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <div className="sizePrice">
