@@ -6,7 +6,7 @@ let initState = {}
 
 async function assignsInit (){
     const response = await Api.get('/user');
-    initState.items=response.data;
+    initState.items=response.data.products || [""];
     initState.addedItems=[];
     initState.total=0
 }

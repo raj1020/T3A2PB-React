@@ -1,4 +1,12 @@
 /* Cart page*/
+
+.errorMessage {
+    text-align: center;
+    font-size: 20px;
+    min-height: 85vh;
+    padding: 30vh 20vw;
+}
+
 .shippingPolicy {
     display: block;
     background-color: rgb(230, 224, 224);

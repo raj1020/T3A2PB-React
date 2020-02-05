@@ -17,7 +17,15 @@ import '../../styles/cart.css';
     }
 
     render(){
-        let itemList = this.props.items.map(item=>{
+        console.log(this.props.items);
+        // if (this.props.items === [] || undefined || null) {
+        //     return (
+        //         <dvi>Something went wrong</dvi>
+        //     );
+        // } 
+        let itemList;
+        try {
+        itemList = this.props.items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
                 <Link className="imageContainer" to="/"><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${item.image}`} alt={item.name}/></Link>
@@ -43,6 +51,11 @@ import '../../styles/cart.css';
 
             )
         })
+        } catch(err){
+            return(
+                <div className="errorMessage" >Oops, something went wrong!</div>
+            )
+        }
 
         return(
             <div>
