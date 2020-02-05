@@ -1,5 +1,9 @@
 /* Cart page*/
 
+.productCardTitle {
+    text-align: center;
+}
+
 .errorMessage {
     text-align: center;
     font-size: 20px;
@@ -79,7 +83,7 @@
 .sizePrice {
     display: flex;
     justify-content: space-around;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 

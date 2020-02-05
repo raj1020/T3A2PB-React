@@ -27,7 +27,7 @@ class ShowProduct extends Component {
                     <Card className="ProductCard" key={product._id}>
                         <Card.Img variant="top" src={product.img} alt={product.name}/>
                         <Card.Body>
-                        <Card.Title>{product.name}</Card.Title>
+                        <Card.Title className="productCardTitle">{product.name}</Card.Title>
                         <div className="sizePrice">
                             <Card.Text>{product.size}</Card.Text>
                             <Card.Text>${product.price}.00</Card.Text>

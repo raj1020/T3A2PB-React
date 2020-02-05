@@ -96,7 +96,7 @@ class Home extends React.Component {
                 <div className='subTitle3'>All Australian owned and produced, organically managed olive grove and trufferie.</div>
             </Container3>
             <Container4>
-                <div className='subTitle3'>In the cool climate of Vass Valley, southern New South Wales, we produce our boutique robust olive oil.</div>
+                <div className='subTitle3'>We produce our boutique robust olive oil in the cool climate of Vass Valley, southern New South Wales</div>
             </Container4>
             <Container2>
                 <div className='subTitle2'>Our extra virgin olive oil is unfiltered with no additives. <br /><br />We endeavour to be environmentally sustainable using biological pest and weed control. </div>

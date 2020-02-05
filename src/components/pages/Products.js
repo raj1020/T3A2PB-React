@@ -30,7 +30,7 @@ import '../../styles/cart.css';
                 <Card className="ProductCard" key={item._id}>
                 <Link className="imageContainer" to={`/product/${item._id}`}><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${item.image}`} alt={item.name}/></Link>
                 <Card.Body>
-                    <Link to={`/product/${item._id}`} className="Link"><Card.Title>{item.name}</Card.Title></Link>
+                    <Link to={`/product/${item._id}`} className="Link"><Card.Title className="productCardTitle">{item.name}</Card.Title></Link>
                     <div className="sizePrice">
                         <Card.Text>{item.size}</Card.Text>
                         <Card.Text>${item.price}.00</Card.Text>
