@@ -16,8 +16,7 @@ class CartPage extends Component{
     }
 
     setProduct=()=>{
-        const {items=[]}=this.props
-        const description = (items.map((item)=>{
+        const description = (this.props.items.map((item)=>{
             return `${item.quantity} x ${item.size} ${item.name} ($${item.quantity*item.price})`
         })).join(' , ')
         this.setState({description})
@@ -30,7 +29,6 @@ class CartPage extends Component{
     //to remove the item completely
     handleRemove = (_id)=>{
         this.props.removeItem(_id);
-        this.props.subtractShipping();
         this.setProduct();
     }
     //to add the quantity
@@ -46,16 +44,19 @@ class CartPage extends Component{
 
     handleToken = async(token) => {
         const tokenId = token.id;
-        const {total} = this.props;
+        const {total, items} = this.props;
         const {description} = this.state;
         const response = await Api.post('/orders', {
             tokenId,
             total,
             description
         });
+
         const { status } = response.data
         if (status === 'success'){
-            console.log(this.props);
+            items.forEach((item)=>{
+                this.handleRemove(item._id);
+            })
             this.props.history.push('/confirmation');
             
         } else {
@@ -65,7 +66,6 @@ class CartPage extends Component{
 
     render(){
         let addedItems;
-        let items;
         try {
             const {total} = this.props
             addedItems = this.props.items.length ?
@@ -87,7 +87,7 @@ class CartPage extends Component{
                                             <span>{item.quantity}</span>
 
                                         </td>
-                                        <td>{item.size} {item.name}</td>
+                                        <td>items{item.size} {item.name}</td>
                                         <td>${item.price}.00</td>
                                         <td>                                
                                             <button onClick={()=>{this.handleRemove(item._id)}}>Remove</button>
@@ -133,7 +133,7 @@ class CartPage extends Component{
                             stripeKey={process.env.REACT_APP_STRIPE_KEY}
                             token={this.handleToken}
                             currency='AUD'
-                            allowRememberMe={false}
+                            // allowRememberMe={false}
                             billingAddress
                             shippingAddress
                             amount={total*100}
@@ -161,8 +161,8 @@ class CartPage extends Component{
 
 const mapStateToProps = (state)=>{
     return{
-        items: state.addedItems,
-        total: state.total
+        items: state.addedItems.addedItems,
+        total: state.addedItems.total
         //addedItems: state.addedItems
     }
 }

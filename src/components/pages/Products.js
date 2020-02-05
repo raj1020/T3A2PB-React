@@ -7,25 +7,18 @@ import '../../styles/cart.css';
 
 
  class Products extends Component{
-
-    componentDidMount() {
-        console.log(this.state)
-    }
-    
     handleClick = (_id)=>{
         this.props.addToCart(_id); 
     }
 
     render(){
-        console.log(this.props.items);
-        // if (this.props.items === [] || undefined || null) {
-        //     return (
-        //         <dvi>Something went wrong</dvi>
-        //     );
-        // } 
+        let items = this.props.items
+        if (!items) {
+            items=[] 
+        } 
         let itemList;
         try {
-        itemList = this.props.items.map(item=>{
+        itemList = items.map(item=>{
             return(
                 <Card className="ProductCard" key={item._id}>
                 <Link className="imageContainer" to={`/product/${item._id}`}><Card.Img className="productImage" variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${item.image}`} alt={item.name}/></Link>
@@ -52,6 +45,7 @@ import '../../styles/cart.css';
             )
         })
         } catch(err){
+            console.log(err)
             return(
                 <div className="errorMessage" >Oops, something went wrong!</div>
             )
@@ -71,11 +65,11 @@ import '../../styles/cart.css';
 }
 const mapStateToProps = (state)=>{
     return {
-      items: state.items
+      items: state.addedItems.items,
+      products: state.products.all
     }
   }
 const mapDispatchToProps= (dispatch)=>{
-    
     return{
         addToCart: (_id)=>{dispatch(addToCart(_id))}
     }
