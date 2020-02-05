@@ -1,3 +1,27 @@
+/* Show page */
+.formContainer {
+    position: relative;
+    min-height: 85vh;
+    padding: 100px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+.ProductCard{
+    height: min-content;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.productDescription {
+    padding: 0px 0px 20px 0px;
+    font-family: 'Geometria-Medium', sans-serif;
+    font-size: 16px;
+
+}
+
 /* Cart page*/
 
 .productCardTitle {
@@ -82,22 +106,18 @@
 
 .sizePrice {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 20px;
     font-weight: bold;
 }
 
 .rowWidth {
     width: 120px;
+    text-align: center;
 }
 
 .row1Width {
     width: 40px;
-}
-
-.ProductCard{
-    padding: 20px;
-    margin: 20px;
 }
 
 .cartCard{

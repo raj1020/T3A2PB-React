@@ -89,7 +89,7 @@ class CartPage extends Component{
                                         </td>
                                         <td>{item.size} {item.name}</td>
                                         <td>${item.price}.00</td>
-                                        <td>                                
+                                        <td className="rowWidth">                                
                                             <button onClick={()=>{this.handleRemove(item._id)}}>Remove</button>
                                         </td>
                                         </tr>
