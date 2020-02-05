@@ -43,13 +43,17 @@ const ShowProduct = ({ match, location }) => {
                 
                 <Link to={`/product/${item._id}`}>  
                
-                <Card.Img variant="top" src={item.img} alt={item.name}/>
+                    <Card.Img variant="top" src={item.img} alt={item.name}/>
+                </Link>
                 <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                    <div className="sizePrice">
-                        <Card.Text>{item.size}</Card.Text>
-                        <Card.Text>${item.price}.00</Card.Text>
-                    </div>
+                <Link to={`/product/${item._id}`}>  
+                    <Card.Title>{item.name}</Card.Title>
+                        <div className="sizePrice">
+                            <Card.Text>{item.size}</Card.Text>
+                            <Card.Text>${item.price}.00</Card.Text>
+                        </div>
+                    </Link>
+                    
                     <div 
                         to="/" 
                         className="addToCart" 
@@ -63,7 +67,7 @@ const ShowProduct = ({ match, location }) => {
                     </div>
                     
                 </Card.Body>
-                </Link>
+                
                 </Card>
 
 
