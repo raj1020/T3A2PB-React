@@ -1,42 +1,17 @@
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
-import Api from './../api/api';
+const products = sessionStorage.getItem('products')
+let initState = {items: JSON.parse(products), addedItems:[], total:0}
 
-
-let initState = {}
-
-async function assignsInit (){
-    const response = await Api.get('/user');
-    initState.items=response.data.products || [""];
-    initState.addedItems=[];
-    initState.total=0
-}
-assignsInit();
-console.log(initState)
-
-// const initState = {
-//         items: [
-//         {_id:'1', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 11.00, size: "250mL", count: 10, available: true, img: logoSm },
-//         {_id:'2', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 16.00, count: 10, size: "500mL", available: true, img: logoSm },
-//         {_id:'3', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 65.00, count: 10, size: "3L", available: true, img: logoSm },
-//         {_id:'4', name: 'Extra Virgin Olive Oil', description:"Extra virgin olive oil", price: 230.00, count: 10, size: "20L", available: false, img: logoSm },
-//         {_id:'5', name: 'Jar of Black Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm },
-//         {_id:'6', name: 'Jar of Green Olives', description:"A jar of olives", price: 8.00, count: 10, size: "200g", available: true, img: logoSm }
-//         ],
-//         addedItems:[],
-//         total: 0
-
-// }
 
 const cartReducer= (state = initState,action)=>{
-   
     //INSIDE HOME COMPONENT
     if(action.type === ADD_TO_CART){
-          let addedItem = state.items.find(item=> item._id === action._id)
+        let addedItem = state.items.find(item=> item._id === action._id)
           //check if the action _id exists in the addedItems
-         let existed_item= state.addedItems.find(item => action._id === item._id)
-         if(existed_item)
+        let existed_item= state.addedItems.find(item => action._id === item._id)
+        if(existed_item)
          {
-            addedItem.quantity += 1 
+            addedItem.quantity += 1
              return{
                 ...state,
                  total: state.total + addedItem.price,
@@ -48,11 +23,10 @@ const cartReducer= (state = initState,action)=>{
             addedItem.quantity = 1;
             //calculating the total
             let newTotal = state.total + addedItem.price 
-            
             return{
                 ...state,
                 addedItems: [...state.addedItems, addedItem],
-                total : newTotal
+                total: newTotal
             }
             
         }
@@ -60,10 +34,8 @@ const cartReducer= (state = initState,action)=>{
     if(action.type === REMOVE_ITEM){
         let itemToRemove= state.addedItems.find(item=> action._id === item._id)
         let new_items = state.addedItems.filter(item=> action._id !== item._id)
-        
-        //calculating the total
+        //calculating the totals
         let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity )
-        console.log(itemToRemove)
         return{
             ...state,
             addedItems: new_items,
