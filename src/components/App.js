@@ -23,6 +23,7 @@ import { setProducts } from './../actions/setProducts';
     componentDidMount = async() => {
         const response = await Api.get('/user');
         this.props.setProducts(response.data.products)
+        this.state.setState(response.data.products)
     }
 
     render () {
