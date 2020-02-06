@@ -24,7 +24,7 @@ class ShowProduct extends Component {
             return (
                 <div className = "formContainer">
                     <Card className="ProductCard" key={product._id}>
-                        <Card.Img variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${product.image}`} alt={product.name}/>                        
+                        <Card.Img variant="top" src={`${process.env.REACT_APP_EXPRESS_URL}/user/${product.image}`} alt={product.name}/>
                         <Card.Body>
                             <Card.Title className="productCardTitle">{product.name}</Card.Title>
                                 <div className="sizePrice">
