@@ -1,4 +1,19 @@
-# Oakbrook Yass Valley (Part A)
+# Oakbrook
+
+---
+*An online store built for Oakbrook, olive oil products, as part of Coder Academy Fastrack Bootcamp final MERN assessment.*
+
+*View live at:*
+
+http://oakbrook-frontend-deployment.s3-website-ap-southeast-2.amazonaws.com/products
+
+*GitHub Repos:*
+
+https://github.com/raj1020/T3A2PB-React
+https://github.com/thomasalfonso/T3A2PB-ReactAdmin
+https://github.com/thomasalfonso/T3A2PB-Express
+
+---
 
 ## Contents
 
@@ -17,7 +32,7 @@
   * [R6 Project Management](#r6-project-management)
     + [R6.1 Trello](#r61-trello)
     + [R6.2 Jira](#r62-jira)
-    + [R6.2 Source Control](#r63-source-control)
+    + [R6.3 Source Control](#r63-source-control)
   * [R7 Testing](#r7-testing)
 
 ## R1 - Description
@@ -132,8 +147,6 @@ The responsive design is also catered to include medium width screens, such as i
 
 ![Show Product Mobile](docs/wireframes/ShowProductMobile.png "Show Product Mobile")
 
-![Retailers Mobile](docs/wireframes/RetailersMobile.png "Retailers Mobile")
-
 ![Health Benefits Mobile](docs/wireframes/HealthBenefitsMobile.png "Health Benefits Mobile")
 
 ![Health Benefits Desktop](docs/wireframes/HealthBenefitsMobile.png "Health Benefits Mobile")
@@ -156,8 +169,6 @@ The responsive design is also catered to include medium width screens, such as i
 ![Products Desktop](docs/wireframes/ProductsDesktop.png "Products Desktop")
 
 ![Show Product Desktop](docs/wireframes/ShowProductDesktop.png "Show Product Desktop")
-
-![Retailers Desktop](docs/wireframes/RetailersDesktop.png "Retailers Desktop")
 
 ![My Cart Desktop](docs/wireframes/MyCartDesktop.png "My Cart Desktop")
 
@@ -225,3 +236,9 @@ Seperate branches were utilised by each team member while working on features, w
 
 ## R7 Testing
 
+A log of manual tests performed during deployment can be found at the following link:
+
+![Manual testing log](docs/manual-testing-log.JPG "screenshot of manual testing log")
+*Figure R7(a) - Screenshot of manual testing log*
+
+https://docs.google.com/spreadsheets/d/1nsu2JN6ar-lq6ZFtENF4jYAog8sCRBziQe5Sow6fNNE/edit#gid=1472010162
