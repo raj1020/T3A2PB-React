@@ -242,3 +242,5 @@ A log of manual tests performed during deployment can be found at the following 
 *Figure R7(a) - Screenshot of manual testing log*
 
 https://docs.google.com/spreadsheets/d/1nsu2JN6ar-lq6ZFtENF4jYAog8sCRBziQe5Sow6fNNE/edit#gid=1472010162
+
+Client consultation and testing is ongoing.
