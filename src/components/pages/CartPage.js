@@ -65,7 +65,7 @@ class CartPage extends Component{
 
     render(){
         let addedItems;
-        let items;
+        // let items;
         try {
             const {total} = this.props
             addedItems = this.props.items.length ?

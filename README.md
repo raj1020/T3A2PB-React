@@ -18,6 +18,7 @@
     + [R6.1 Trello](#r61-trello)
     + [R6.2 Jira](#r62-jira)
     + [R6.2 Source Control](#r63-source-control)
+  * [R7 Testing](#r7-testing)
 
 ## R1 - Description
 
@@ -188,6 +189,14 @@ The Jira platform is be constantly monitored and updated in response to the chan
 ![Jira Kanban task backlog](docs/jira-2020-01-16-B.JPG "Jira Kanban task backlog 16/01")
 *Figure R6.2(b) - Screenshot of Jira task backlog from 16/01/2020.*
 
+The project was broken-up into three sprints which were managed in Jira: 
+- Sprint A: Documentation and planning
+- Sprint B: MVP Functioning app
+- Sprint C: Finalisation - Bug fixes and deployment
+
+![Jira Kanban sprint](docs/jira-2020-02-06-sprint.JPG "Jira Kanban sprint 06/05")
+*Figure R6.2(c) - Screenshot of finalisation Sprint C managed in Jira 05/02/2020.*
+
 ### R6.3 Task Delegation
 It quickly became apparent that different team members have different strengths, working styles and preferences for which features they want to work on.
 
@@ -200,6 +209,10 @@ Tasks were generally delegated as follows:
 
 While these were the general roles of the team, the team followed an agile methodology which meant these roles were not rigid but only a guide. 
 
+Task allocation was documented in the Jira platform.
+
+![Jira Kanban task allocation](docs/jira-2020-02-06.JPG "Jira Kanban task allocation 06/02")
+*Figure R6.3(a) - Screenshot of Jira task allocation 05/02/2020.*
 
 ### R6.3 Source Control
 
@@ -209,3 +222,6 @@ This project composes of three separate public GitHub repositories:
 - Express back-end: https://github.com/thomasalfonso/T3A2PB-Express
 
 Seperate branches were utilised by each team member while working on features, which were then merged to master at regular intervals. Commits were made often - after any notable portion of code was edited.
+
+## R7 Testing
+
