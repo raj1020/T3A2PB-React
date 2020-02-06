@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -11,15 +11,19 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './mui/NavBar';
 import Footer from './header/Footer';
 import Header from './header/Header';
-// import Cart from './pages/Cart';
 import CartPage from './pages/CartPage';
-import CheckOut from './pages/CheckOut';
-// import CheckOutPage from './pages/CheckOutPage';
-// import Styled from 'styled-components';
+import Api from '../api/api';
+import { connect } from 'react-redux';
+import { setProducts } from './../actions/setProducts';
 
 
- class App extends React.Component {
-     state = { location: "home" }
+ class App extends Component {
+    state = { location: "home" }
+
+    componentDidMount = async() => {
+        const response = await Api.get('/user');
+        this.props.setProducts(response.data.products)
+    }
 
     render () {
         return (
@@ -37,7 +41,6 @@ import CheckOut from './pages/CheckOut';
                         <Route exact path = "/products" component = {Products} />
                         <Route exact path = "/confirmation" component = {Confirmation} />
                         <Route exact path = "/product/:id" component = {ShowProduct} />
-                        <Route exact path = "/checkout" component = {CheckOut} />
                         <Route component={Home} />
                     </Switch>
                     <Footer />
@@ -48,4 +51,4 @@ import CheckOut from './pages/CheckOut';
     }
 }
 
-export default App;
+export default connect(null, {setProducts})(App);

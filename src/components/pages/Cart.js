@@ -9,9 +9,9 @@ import '../../styles/cart.css';
 
 class Cart extends Component{
 
-    // componentDidMount() {
-    //     console.log(this.props.addedItems);
-    // }
+    componentDidMount() {
+        console.log(this.props);
+    }
 
     //to remove the item completely
     handleRemove = (_id)=>{
@@ -26,6 +26,7 @@ class Cart extends Component{
         this.props.subtractQuantity(_id);
     }
     render(){
+        console.log(this.props)
         let addedItems;
         try {   
             addedItems = this.props.items.length ?
@@ -102,7 +103,7 @@ class Cart extends Component{
 
 const mapStateToProps = (state)=>{
     return{
-        items: state.addedItems,
+        items: state.items,
         //addedItems: state.addedItems
     }
 }

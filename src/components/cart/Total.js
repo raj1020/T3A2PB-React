@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 import '../../styles/cart.css';
 
 class Total extends Component{
     
     componentDidMount() {
-        if(this.props.total) {
+        const itemPrice = (this.props.items.map((item)=>{
+            return item.quantity*item.price
+        })).reduce((acc,cur)=>{
+            return acc+cur
+        }, 0)
+        if(this.props.items.length>0 && this.props.total-itemPrice<15) {
             this.props.addShipping();
         }
     }
 
-    componentWillUnmount() {
-         if(this.props.total)
-              this.props.subtractShipping()
+    componentDidUpdate(){
+        if (this.props.items.length === 0 && this.props.total>0){
+            this.props.subtractShipping();
+        }
     }
 
     render(){
-  
         return(
             <div>
             <Table className="tableHeader" striped bordered hover>
@@ -44,8 +48,8 @@ class Total extends Component{
 
 const mapStateToProps = (state)=>{
     return{
-        addedItems: state.addedItems,
-        total: state.total
+        items: state.addedItems.addedItems,
+        total: state.addedItems.total
     }
 }
 
