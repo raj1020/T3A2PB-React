@@ -233,7 +233,7 @@
   background-color: #CFCC25;
   background-color: cutom-color;
   border-color: #CFCC25;
-  border-color: cutom-cor;
+  /* border-color: cutom-cor; */
 }
 
 .btn-primary:hover {
