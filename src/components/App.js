@@ -18,12 +18,10 @@ import { setProducts } from './../actions/setProducts';
 
 
  class App extends Component {
-    state = { location: "home" }
-
-    componentDidMount = async() => {
-        const response = await Api.get('/user');
-        this.props.setProducts(response.data.products)
-        // this.state.setState(response.data.products)
+    constructor (props) {
+        super(props);
+        this.state = {location:'home'}
+        Api.get('/user').then((response)=>{console.log(this.props.setProducts(response.data.products))})
     }
 
     render () {
